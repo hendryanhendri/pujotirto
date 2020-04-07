@@ -175,7 +175,7 @@
 
         <div class="col-lg-6">
             <div class="card-box card">
-                <h4 class="m-t-0">Mudik Analytics</h4>
+                <h4 class="m-t-0">Analisa Pemudik</h4>
                 <div class="text-center">
                     <ul class="list-inline chart-detail-list">
                         <li>
@@ -193,18 +193,63 @@
 
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <div class="card-box card">
             <h4 class="m-t-0">PROSEDUR PEMUDIK</h4>
             <center><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;zoom&quot;:0.5,&quot;toolbar&quot;:&quot;layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-04-07T18:15:58.239Z\&quot; agent=\&quot;5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\&quot; etag=\&quot;2hDmivyPkGBtTnuJTpKd\&quot; version=\&quot;12.9.9\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;97916047-d0de-89f5-080d-49f4d83e522f\&quot;&gt;7Vpbe6I6FP01Ps58XBTkMUepWhH5BKbT84YalTNoPBhbnV9/EhJEEC/1ypy2D5WsXNnJWnsnoSTXpqtG6M0nHTSEQUkShquSXC9JkljVJPJDkTVHJKnKkHHoDzmWALb/G3JQ4OjSH8JFqiBGKMD+PA0O0GwGBziFeWGI3tPFRihI9zr3xnAHsAdeEKPfKwn+4g/xhOOioiUZTeiPJ7zzqqSyjL43+DUO0XLGeyxJ8ij6Y9lTL26Lv+pi4g3R+xYk6yW5FiKE2dN0VYMBNW9sOFbvaU/u5n1COMOnVGgEHcEV5kJ/OJbX/bYw+q1K3yoKHxxexyaBQ2IhnkQhnqAxmnmBnqB/RS8NabMCSSVlDITmBBQJ+A/EeM2n21tiRKAJngY8l5hiTnNGAVwBOosEG/lBUEMBCqNRyEMPVkcDWhaH6BfcylEGVdgfkRw2cjrcvRbh0AItwwE8ZIbKZkLIWodoCnG4JhVDGHjYf0t34PE1N96U21S1kE+6lgROEFXgcx/TQxXSTWAvHEPMayVzRx62hpFA0Yx+ZHb54n7zgiWMV6kSYGpuRLtUxjgyJMP6WYAV2locyr9LFGd8W0TTC0gBWZmvksxsK8sYaMUIeZllthTBcscUZpHF3JudMiipnDcoSzfrwAFmo0TpsumaNZr79oPN0kvaIkyXyd82dO6A6qBH7CIYLuiRH1Nv6FGaroUN2u46tIGXlgFeQZM8We5z12n1nG5cco8Nhfu+y99dk2Z29B4d5cF5JfDOctspmlGmtO68T3wM7bkXEfud+Ke0xpyrJ28wxHB1WFF2hSKuIKUJX+XJ98SzyLHrm2w5FbEq7NeWlCp8WAKqZwh8nj5fLPqPFXj1JgIvStqDFV4tlsIXQeINou62Gym85RpM6tt6z+1QUaoVRffboAdMp8UEE5j1ViT7tm6ADoXEMvnXjHzDJ9TRbOD0eB1V5C8dpXrDd0VM1g7ZS7pQcC/zelrBZPFLF7908SrxpVY4YZSKRbUfV2HaqaMSq3mjem61aabTqoM2+QV1EFHNcJvAZFRzdAdY5Jcsb8Y/smkynwFhJV3Y3pQutll/MT+bftcm0x/CMdo395yURzfhnCI8nnTlHNJlLJ0XfMDZkD/WB4G3WPiDe8UWu+bdsl4lx3gxdukOrVxOz165rKXbYDHPzg5ttyVBPNLSjfd6yjlntf+/EFS5zVltWc7MbuW+O3nlwrPaU2PDE/3oMTeaFyBeO2DlbjTjPj84hAI6qRtskGXl8T6pMCeNxIbh+iet/70SJ195c1Givkql1jz1WFlTT91ZazfRP0mtpFaUKt5Z/y48yby2/h3bsd9DAA/uEs6827n2xuAzq3D2uqcAKqyKO3b8lEHiqeeUqpA/w/c5p1QuPKe8uugVQfWA2WiwC28a84Fegz4awOrSq3BL7+i9lulEaljXbVCK78ot3XEbwI6q2XqTXvKX0jflHSJvhhsJXYeUe3ohlZ8c3bC+5CxXzpTy4+Vs91zj4UFlKqRMIsw9QeUVRS2+Wz4uavJNQkQle9kt3DlGjA1QHLksgl62u6btGg6wW5Ekmg0mfLlymEgg0z2hVLnogDm/l/jguxN/bEU7tMgAdXOfWlZof7nn3l+inCKdJj1elOVC0fDnVTh46o3PwaOqhk53ZxfuzTqUwtEXdIRU5F+t+6NVF7W9S1oA7Yh17Jxsi5FN13bpwyu766Xcb9vA5MUt3QRUK6IE3fmZz65jvoIjW74/gnc3uAbKOj8t7xZIy+Hh5gPwD/CQJJMPw5n3TD7Al/X/AA==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div></center>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card-box card">
+            <h4 class="m-t-0">CONTACT PERSON</h4></br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default panel-fill">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">PELAPORAN DAN INFORMASI</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="m-b-20">
+                            <strong>Bp Giriyanto</strong>
+                            <p class="text-muted"><a href="https://wa.me/081804777678?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 081804777678</p></a>
+                        </div><hr>
+                        <div class="m-b-20">
+                            <strong>Bp Tofikun</strong>
+                            <p class="text-muted"><a href="https://wa.me/082133965595?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 082133965595</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-default panel-fill">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">KESEHATAN DAN KONSULTASI</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="m-b-20">
+                            <strong>Ibu Widyati</strong>
+                            <p class="text-muted"><a href="https://wa.me/087837872754?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 087837872754</p></a>
+                        </div><hr>
+                        <div class="m-b-20">
+                            <strong>Ibu Susan</strong>
+                            <p class="text-muted"><a href="https://wa.me/085385366372?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 085385366372</p></a>
+                        </div><hr>
+                        <div class="m-b-20">
+                            <strong>Bp Sutik</strong>
+                            <p class="text-muted"><a href="https://wa.me/081393750430?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 081393750430</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
         </div>
     </div>
 </div>
 
 </div>
 <!-- end container -->
-
-
 
         <div class="footer">
             <div class="container">
