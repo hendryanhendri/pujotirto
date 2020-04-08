@@ -61,10 +61,8 @@
 
 <!-- Page content start -->
 <div class="page-contentbar">
-
     <!-- START PAGE CONTENT -->
     <div id="page-right-content">
-
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -72,9 +70,9 @@
                     <h4><center>KAWAL CORONA</center></h4>
                     <marquee width="100%" height="40" direction="left"><font color="red"><p><b>Untuk pemudik diharapkan jangan mudik terlebih dahulu, sayangi keluarga anda !</b></p></font></marquee>
                     <hr>
-
                 </div>
             </div> <!-- end row -->
+     <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
         <div class="row">
             <div class="col-sm-3">
@@ -248,7 +246,6 @@
             <!-- end .page-contentbar -->
         </div>
         <!-- End #page-wrapper -->
-        <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
 
         <!-- js placed at the end of the document so the pages load faster -->
