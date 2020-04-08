@@ -18,7 +18,7 @@ class Login extends CI_Controller {
         
     }
 
-    public function getLogin()
+    public function getLogin($id='')
     {
         $username=str_replace("'", "", htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES));
         $password=str_replace("'", "", htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES));
