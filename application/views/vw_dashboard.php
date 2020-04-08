@@ -248,7 +248,7 @@
             <!-- end .page-contentbar -->
         </div>
         <!-- End #page-wrapper -->
-
+        <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
 
         <!-- js placed at the end of the document so the pages load faster -->
