@@ -72,7 +72,8 @@
                     <marquee width="100%" height="40" direction="left"><font color="red"><p><b>Untuk pemudik diharapkan jangan mudik terlebih dahulu, sayangi keluarga anda !</b></p></font></marquee>
                     <hr>
                 </div>
-            </div> <!-- end row -->
+        </div> <!-- end row --></br>
+            
         <div class="row">
             <div class="col-sm-3">
                 <div class="card-box card">
@@ -120,8 +121,6 @@
                     <h2 class="m-b-20"><font color="#993300"><center>0</font> <h5>Orang<h5></center></h2>
                 </div>
             </div>
-
-
         </div>
                         <!-- end row -->
 
@@ -212,10 +211,25 @@
                     </div>
                 </div>
             </div>
-
          </div>
         </div>
     </div>
+    <div class="col-sm-12">
+            <div class="card-box card">
+        <?php 
+            foreach($get_data_covid as $row){?>
+            <div class="alert-secondary" role="alert">
+            <center>
+            <h3><b>Update Corona Virus <?php echo $row->name;?></b></h3><hr>
+            <p><b>Positif</b>    : <span class="badge badge-primary"><?php echo $row->positif;?></span> | 
+                <b>Sembuh   </b>  : <span class="badge badge-success"><?php echo $row->sembuh;?> </span> | 
+                <b>Meninggal</b>  : <span class="badge badge-danger"><?php echo $row->meninggal;?></span></p>
+                <p>Source data : <a href="https://kawalcorona.com" target="_blank" style="text-decoration:none;">kawalkorona.com</a></p>
+            </center>
+            </div>
+        <?php }?>
+            </div>
+        </div>
 </div>
 
 </div>
