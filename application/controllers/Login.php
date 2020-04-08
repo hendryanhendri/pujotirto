@@ -20,6 +20,10 @@ class Login extends CI_Controller {
 
     public function getLogin()
     {
+        $username=str_replace("'", "", htmlspecialchars($this->input->post('username',TRUE),ENT_QUOTES));
+        $password=str_replace("'", "", htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES));
+
+        $this->dataModelLogin->getAuthLogin($username, $password);
 
     }
 

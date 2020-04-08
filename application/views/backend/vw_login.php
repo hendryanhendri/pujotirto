@@ -62,12 +62,16 @@
                                                 <button class="btn btn-lg btn-custom btn-block" type="submit">Masuk</button>
                                             </div>
                                         </div>
-
                                     </form>
-
                                     <div class="clearfix"></div>
-
                                 </div>
+                                <?php
+                            $info = $this->session->flashdata('info');
+                            if(!empty($info))
+                            {
+                                echo $info;
+                            }
+                            ?>
                             </div>
                             <!-- end card-box-->
                         </div>
