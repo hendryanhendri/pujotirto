@@ -91,11 +91,6 @@
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Sembuh</center></h4><hr>
                     <h2 class="m-b-20"><font color="green"><center>0</font> <h5>Orang<h5></center></h2>
-                    <!-- <div class="progress progress-sm m-0">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                            <span class="sr-only">77% Complete</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
@@ -104,11 +99,6 @@
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Meninggal</center></h4><hr>
                     <h2 class="m-b-20"><font color="red"><center>0</font> <h5>Orang<h5></center></h2>
-                    <!-- <div class="progress progress-sm m-0">
-                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                            <span class="sr-only">77% Complete</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
@@ -117,11 +107,6 @@
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Pemudik</center></h4><hr>
                     <h2 class="m-b-20"><font color="#ffcc00"><center>10</font> <h5>Orang<h5></center></h2>
-                    <!-- <div class="progress progress-sm m-0">
-                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                            <span class="sr-only">77% Complete</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="col-sm-6">
@@ -129,11 +114,6 @@
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP</center></h4><hr>
                     <h2 class="m-b-20"><font color="#804d00"><center>10</font> <h5>Orang<h5></center></h2>
-                    <!-- <div class="progress progress-sm m-0">
-                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                            <span class="sr-only">77% Complete</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="col-sm-6">
@@ -141,19 +121,12 @@
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total PDP</center></h4><hr>
                     <h2 class="m-b-20"><font color="#993300"><center>0</font> <h5>Orang<h5></center></h2>
-                    <!-- <div class="progress progress-sm m-0">
-                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                            <span class="sr-only">77% Complete</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
 
         </div>
                         <!-- end row -->
-
-
 
     <div class="row">
         <div class="col-lg-6">
@@ -211,11 +184,11 @@
                     <div class="panel-body">
                         <div class="m-b-20">
                             <strong>Bp Giriyanto</strong>
-                            <p class="text-muted"><a href="https://wa.me/081804777678?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 081804777678</p></a>
+                            <p class="text-muted"><a href="https://wa.me/+6281804777678?" target="_blank"><i class="mdi mdi-whatsapp"></i> 0818-0477-7678</p></a>
                         </div><hr>
                         <div class="m-b-20">
                             <strong>Bp Tofikun</strong>
-                            <p class="text-muted"><a href="https://wa.me/082133965595?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 082133965595</p></a>
+                            <p class="text-muted"><a href="https://wa.me/+6282133965595" target="_blank"><i class="mdi mdi-whatsapp"></i> 0821-3396-5595</p></a>
                         </div>
                     </div>
                 </div>
@@ -229,15 +202,15 @@
                     <div class="panel-body">
                         <div class="m-b-20">
                             <strong>Ibu Widyati</strong>
-                            <p class="text-muted"><a href="https://wa.me/087837872754?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 087837872754</p></a>
+                            <p class="text-muted"><a href="https://wa.me/+6287837872754" target="_blank"><i class="mdi mdi-whatsapp"></i> 0878-3787-2754</p></a>
                         </div><hr>
                         <div class="m-b-20">
                             <strong>Ibu Susan</strong>
-                            <p class="text-muted"><a href="https://wa.me/085385366372?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 085385366372</p></a>
+                            <p class="text-muted"><a href="https://wa.me/+6285385366372" target="_blank"><i class="mdi mdi-whatsapp"></i> 0853-8536-6372</p></a>
                         </div><hr>
                         <div class="m-b-20">
                             <strong>Bp Sutik</strong>
-                            <p class="text-muted"><a href="https://wa.me/081393750430?text=Assalamuallaikum%20"><i class="mdi mdi-whatsapp"></i> 081393750430</p></a>
+                            <p class="text-muted"><a href="https://wa.me/+6281393750430" target="_blank"><i class="mdi mdi-whatsapp"></i> 0813-9375-0430</p></a>
                         </div>
                     </div>
                 </div>
