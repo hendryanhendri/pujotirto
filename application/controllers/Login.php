@@ -27,6 +27,11 @@ class Login extends CI_Controller {
 
     }
 
+    public function getLogout()
+    {
+        $this->dataModelLogin->getLogoutFunction();
+    }
+
 }
 
 /* End of file Login.php */

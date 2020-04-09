@@ -46,7 +46,7 @@
                                         <div class="form-group m-b-20">
                                             <div class="col-xs-12">
                                                 <label for="emailaddress">Username</label>
-                                                <input class="form-control" type="text" id="username" name="username" required="" placeholder="username">
+                                                <input class="form-control" type="text" id="username" name="username" required="" placeholder="username" autofocus autocomplete="off">
                                             </div>
                                         </div>
 
@@ -65,14 +65,14 @@
                                     </form>
                                     <div class="clearfix"></div>
                                 </div>
-                                <?php
+                            </div>
+                            <?php
                             $info = $this->session->flashdata('info');
                             if(!empty($info))
                             {
                                 echo $info;
                             }
                             ?>
-                            </div>
                             <!-- end card-box-->
                         </div>
                         <!-- end wrapper -->
@@ -82,16 +82,21 @@
             </div>
         </section>
         <!-- END HOME -->
+ <script type="text/javascript">
+window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function() {
+        $(this).remove();
+    });
+}, 6000);
+</script>
 
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="<?php echo base_url(); ?>assets/js/jquery-2.1.4.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.slimscroll.min.js"></script>
 
-
-        <!-- js placed at the end of the document so the pages load faster -->
-        <script src="<?php echo base_url(); ?>assets/js/jquery-2.1.4.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/jquery.slimscroll.min.js"></script>
-
-        <!-- App Js -->
-        <script src="<?php echo base_url(); ?>assets/js/jquery.app.js"></script>
+<!-- App Js -->
+<script src="<?php echo base_url(); ?>assets/js/jquery.app.js"></script>
 
     </body>
 </html>

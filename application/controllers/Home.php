@@ -12,6 +12,7 @@ class Home extends CI_Controller {
     
     public function index()
     {
+        $this->Secure_access->getsecurity();
         
 
         $this->load->view('backend/vw_home');

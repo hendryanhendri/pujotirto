@@ -17,6 +17,12 @@ class Dashboard extends CI_Controller {
     
         $result['get_data_covid'] = $characters;
 
+        // $data_visit = array(
+        //     ''  => ,
+
+        // );
+
+
 
         $this->load->view('vw_dashboard', $result);
         
