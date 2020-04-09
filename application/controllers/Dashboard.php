@@ -12,20 +12,21 @@ class Dashboard extends CI_Controller {
 
     public function index()
     {
-        $url        = 'https://api.kawalcorona.com/indonesia'; // path to your JSON file
-        $data_url   = file_get_contents($url); // put the contents of the file into a variable
-        $characters = json_decode($data_url); // decode the JSON feed
-    
-        $result['get_data_covid'] = $characters;
-
         $value = array(
             'visit_date'    => date("Y-m-d H:i:s"),
             'pj_ip'         => $this->input->ip_address(),
             'pj_version'    => $_SERVER['HTTP_USER_AGENT'],
             'pj_os'         => php_uname(),
+            'pj_browser'    => get_browser(),
             'pages'         => 'Dashboard',
         );
         $this->dataModelHome->getInsertAnalytic($value);
+
+        $url        = 'https://api.kawalcorona.com/indonesia'; // path to your JSON file
+        $data_url   = file_get_contents($url); // put the contents of the file into a variable
+        $characters = json_decode($data_url); // decode the JSON feed
+    
+        $result['get_data_covid'] = $characters;
 
         $this->load->view('vw_dashboard', $result);
         
