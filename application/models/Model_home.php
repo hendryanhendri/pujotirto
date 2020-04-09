@@ -10,6 +10,11 @@ class Model_home extends CI_Model {
         date_default_timezone_set('Asia/Jakarta');
     }
 
+    public function getInsertAnalytic($data)
+    {
+        $this->db->insert('t_visit_pj', $data);
+    }
+
     
 
 

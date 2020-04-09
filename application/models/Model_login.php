@@ -42,12 +42,14 @@ class Model_login extends CI_Model {
     public function getLogoutFunction()
     {
         $this->session->sess_destroy();
-		$this->session->set_flashdata('info', '<div class="col-sm-12"><div class="alert alert-success alert-dismissible">
+
+		$this->session->set_flashdata('info', '<div class="col-sm-12"><div class="alert alert-info alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h5><i class="mdi mdi-alert"></i> Terimakasih!</h5>
         Terimakasih, anda sudah log out !
         </div></div>');
-		redirect('pujotirto',false);
+        
+		redirect('pujotirto');
     }
 
 
