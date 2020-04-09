@@ -9,7 +9,7 @@ class Secure_access extends CI_Model {
 		if(empty($username))
 		{
 			$this->session->sess_destroy();
-			redirect('pujotirto');
+			redirect('dashboard');
 		}
 	}
 
