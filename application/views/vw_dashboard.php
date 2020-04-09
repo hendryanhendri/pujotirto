@@ -8,7 +8,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="<?php echo  base_url(); ?>assets/images/favicon.ico">
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>gambar/covid.png">
 
         <!--Morris Chart CSS -->
 		<link rel="stylesheet" href="<?php echo  base_url(); ?>assets/plugins/morris/morris.css">
