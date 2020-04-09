@@ -13,9 +13,15 @@ class Home extends CI_Controller {
     public function index()
     {
         $this->Secure_access->getsecurity();
+
+        $url        = 'https://api.kawalcorona.com/indonesia'; // path to your JSON file
+        $data_url   = file_get_contents($url); // put the contents of the file into a variable
+        $characters = json_decode($data_url); // decode the JSON feed
+    
+        $result['get_data_covid'] = $characters;
         
 
-        $this->load->view('backend/vw_home');
+        $this->load->view('backend/vw_home', $result);
     }
 
 }
