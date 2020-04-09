@@ -17,7 +17,6 @@ class Dashboard extends CI_Controller {
             'pj_ip'         => $this->input->ip_address(),
             'pj_version'    => $_SERVER['HTTP_USER_AGENT'],
             'pj_os'         => php_uname(),
-            'pj_browser'    => get_browser(),
             'pages'         => 'Dashboard',
         );
         $this->dataModelHome->getInsertAnalytic($value);
