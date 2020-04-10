@@ -21,7 +21,7 @@ if(!empty($info))
         <div class="col-lg-12">
             <div class="card-box card">
                 <div class="p-20 m-b-20">
-                    <form action="<?php echo base_url(); ?>perantau/saveDataPerantau" class="form-validation" method="POST">
+                    <form action="<?php echo base_url(); ?>perantau/saveDataNonPerantau" class="form-validation" method="POST">
                         
                 <div class="row">
                     <div class="col-lg-6">

@@ -101,6 +101,65 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
 
+        $dateRange  = $this->input->post("daterange");
+        $resultDate = explode('-', $dateRange);
+        $startDate      = $resultDate[0];
+        $endDate        = $resultDate[1];
+        /* convert startdate */
+        $dateStart      = strtotime($startDate);
+        $startResult    = date('Y-m-d', $dateStart);
+        /* convert enddate */
+        $DateEnd        = strtotime($endDate);
+        $endResult      = date('Y-m-d', $DateEnd);
+
+        $data_karantina =array(
+            'nik'               => $this->input->post('nik'),
+            'start_karantina'   => $startResult,
+            'finish_karantina'  => $endResult,
+            'status_karantina'  => 'ON KARANTINA', 
+        );
+        $insert_karantina = $this->dataModelPerantau->getInsertDataKarantina($data_karantina);
+        
+        $data_perantau   =array(
+            'nik'               => $this->input->post('nik'),
+            'nama_lengkap'      => $this->input->post('nama_lengkap'),
+            'jenkel'            => $this->input->post('jenkel'),
+            'rt'                => $this->input->post('rt'), 
+            'rw'                => $this->input->post('rw'),
+            'ttl'               => date("Y-m-d", strtotime($this->input->post('ttl'))), 
+            'dusun'             => $this->input->post('dusun'),
+            'kelurahan'         => $this->input->post('kelurahan'),
+            'kecamatan'         => $this->input->post('kecamatan'),
+            'kabupaten'         => $this->input->post('kabupaten'),
+            'no_telf'           => $this->input->post('no_telf'),
+            'status_'           => 'PDP',
+            'source_data'       => 'NON PERANTAU',
+            'keterangan'        => $this->input->post('keterangan'),
+            'tanggal_sakit'    => date("Y-m-d", strtotime($this->input->post('tanggal_sakit'))),
+            'created_by'        => $this->session->userdata('fullname'),
+            'created_date'      => date("Y-m-d H:i:s") 
+        );
+        $insert = $this->dataModelPerantau->getInsertData($data_perantau);
+
+        $data_aktifitas =array(
+            'nik'           => $this->input->post('nik'),
+            'fullname'      => $this->session->userdata('fullname'),
+            'form_'         => 'FORM ADD NON PERANTAU',
+            'action_'       => 'ADD',
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+        $insert_aktifitas = $this->dataModelPerantau->getInsertDataAktifitas($data_aktifitas);
+
+        echo json_encode(array("status" => TRUE));
+        $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <i class="mdi mdi-check-all"></i>
+        <strong>Sukses!</strong> Yeay data berhasil disimpan !
+    </div></div><center>');
+
+        redirect('perantau/add_non_perantau');
+
     }
 
 }
