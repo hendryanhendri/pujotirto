@@ -140,7 +140,6 @@ if(!empty($info))
                     </div>
                 </div>
 
-                
 
                 <div class="col-lg-12">
                     <div class="form-group">
