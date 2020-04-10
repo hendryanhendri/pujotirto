@@ -88,6 +88,7 @@
                             <ul class="submenu">
                                 <li><a href="<?php echo base_url();?>perantau/add_perantau">Perantau</a></li>
                                 <li><a href="<?php echo base_url();?>perantau/add_non_perantau">Non Perantau</a></li>
+                                <li><a href="<?php echo base_url();?>perantau/master_data">Master Data</a></li>
                             </ul>
                         </li>
 
