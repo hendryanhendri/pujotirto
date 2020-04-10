@@ -62,7 +62,7 @@ class Perantau extends CI_Controller {
             'nik'           => $this->input->post('nik'),
             'fullname'      => $this->session->userdata('fullname'),
             'form_'         => 'FORM ADD PERANTAU',
-            'action_'        => 'ADD',
+            'action_'       => 'ADD',
             'created_date'  => date("Y-m-d H:i:s"),
         );
         $insert_aktifitas = $this->dataModelPerantau->getInsertDataAktifitas($data_aktifitas);
@@ -99,23 +99,24 @@ class Perantau extends CI_Controller {
         $insert_karantina = $this->dataModelPerantau->getInsertDataKarantina($data_karantina);
         
         $data_perantau   =array(
-            'nik'               => $this->input->post('nik'),
-            'nama_lengkap'      => $this->input->post('nama_lengkap'),
-            'jenkel'            => $this->input->post('jenkel'),
-            'rt'                => $this->input->post('rt'), 
-            'rw'                => $this->input->post('rw'),
-            'ttl'               => date("Y-m-d", strtotime($this->input->post('ttl'))), 
-            'dusun'             => $this->input->post('dusun'),
-            'kelurahan'         => $this->input->post('kelurahan'),
-            'kecamatan'         => $this->input->post('kecamatan'),
-            'kabupaten'         => $this->input->post('kabupaten'),
-            'no_telf'           => $this->input->post('no_telf'),
-            'status_'           => 'PDP',
-            'source_data'       => 'NON PERANTAU',
-            'keterangan'        => $this->input->post('keterangan'),
-            'tanggal_periksa'   => date("Y-m-d", strtotime($this->input->post('tanggal_periksa'))),
-            'created_by'        => $this->session->userdata('fullname'),
-            'created_date'      => date("Y-m-d H:i:s") 
+            'nik'                   => $this->input->post('nik'),
+            'nama_lengkap'          => $this->input->post('nama_lengkap'),
+            'jenkel'                => $this->input->post('jenkel'),
+            'rt'                    => $this->input->post('rt'), 
+            'rw'                    => $this->input->post('rw'),
+            'ttl'                   => date("Y-m-d", strtotime($this->input->post('ttl'))), 
+            'dusun'                 => $this->input->post('dusun'),
+            'kelurahan'             => $this->input->post('kelurahan'),
+            'kecamatan'             => $this->input->post('kecamatan'),
+            'kabupaten'             => $this->input->post('kabupaten'),
+            'no_telf'               => $this->input->post('no_telf'),
+            'status_'               => 'PDP',
+            'source_data'           => 'NON PERANTAU',
+            'fasilitas_kesehatan'   => $this->input->post('fasilitas_kesehatan'),
+            'keterangan'            => $this->input->post('keterangan'),
+            'tanggal_periksa'       => date("Y-m-d", strtotime($this->input->post('tanggal_periksa'))),
+            'created_by'            => $this->session->userdata('fullname'),
+            'created_date'          => date("Y-m-d H:i:s") 
         );
         $insert = $this->dataModelPerantau->getInsertData($data_perantau);
 
