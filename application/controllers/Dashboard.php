@@ -27,6 +27,13 @@ class Dashboard extends CI_Controller {
     
         $result['get_data_covid'] = $characters;
 
+        $result['getODP']       = $this->dataModelHome->getDataODP()->result();
+        $result['getPDP']       = $this->dataModelHome->getDataPDP()->result();
+        $result['getPemudik']   = $this->dataModelHome->getDataPemudik()->result();
+        $result['getPositif']   = $this->dataModelHome->getDataPositif()->result();
+        $result['getMeninggal'] = $this->dataModelHome->getDataMeninggal()->result();
+        $result['getSembuh']    = $this->dataModelHome->getDataSembuh()->result();
+
         $this->load->view('vw_dashboard', $result);
         
     }
