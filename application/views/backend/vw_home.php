@@ -88,7 +88,7 @@
                             <ul class="submenu">
                                 <li><a href="<?php echo base_url();?>perantau/add_perantau">Data ODP</a></li>
                                 <li><a href="<?php echo base_url();?>perantau/add_non_perantau">Data PDP</a></li>
-                                <li><a href="<?php echo base_url();?>perantau/master_data">Master Data</a></li>
+                                <li><a href="<?php echo base_url();?>home/master_data">Master Data</a></li>
                             </ul>
                         </li>
 
@@ -96,8 +96,8 @@
                             <a href="#"> <span><i class="ti-settings"></i></span><span>Pengaturan</span> </a>
                             <ul class="submenu">
                                 <li><a href="<?php echo base_url();?>add_users">Tambah Pengguna</a></li>
-                                <li><a href="<?php echo base_url();?>">Histori Aktifitas</a></li>
-                                <li><a href="<?php echo base_url();?>">Ubah Text Berjalan</a></li>
+                                <li><a href="<?php echo base_url();?>home/histori_aktifitas">Histori Aktifitas</a></li>
+                                <li><a href="<?php echo base_url();?>home/text_berjalan">Ubah Text Berjalan</a></li>
                             </ul>
                         </li>
 

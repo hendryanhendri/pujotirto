@@ -20,6 +20,7 @@ class Home extends CI_Controller {
         // $characters = json_decode($data_url); // decode the JSON feed
     
         // $result['get_data_covid'] = $characters;
+        
         $result['getODP']       = $this->dataModelHome->getDataODP()->result();
         $result['getPDP']       = $this->dataModelHome->getDataPDP()->result();
         $result['getPemudik']   = $this->dataModelHome->getDataPemudik()->result();
@@ -28,6 +29,29 @@ class Home extends CI_Controller {
         $result['getSembuh']    = $this->dataModelHome->getDataSembuh()->result();
 
         
+
+        $this->load->view('backend/vw_home',$result);
+    }
+
+    public function text_berjalan()
+    {
+        $result['content']  = 'backend/content/vw_content_text_berjalan';
+
+        $this->load->view('backend/vw_home',$result);
+
+    }
+
+    public function histori_aktifitas()
+    {
+        $result['content']  = 'backend/content/vw_content_histori';
+
+        $this->load->view('backend/vw_home',$result);
+
+    }
+
+    public function master_data()
+    {
+        $result['content']  = 'backend/content/vw_content_masterdata';
 
         $this->load->view('backend/vw_home',$result);
     }
