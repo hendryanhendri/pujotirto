@@ -111,27 +111,62 @@ if(!empty($info))
 
                 <div class="col-lg-3">
                     <div class="form-group">
-                        <label>Tanggal Sakit</label>
+                        <label for="userName">Fasilitas Kesehatan<span class="text-danger">*</span></label>
+                        <input type="text" name="fasilitas_kesehatan" parsley-trigger="change" required placeholder="Tempat Periksa" class="form-control" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label>Tanggal Periksa</label>
                         <div>
                             <div class="input-group">
-                                <input name="tanggal_sakit" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker">
+                                <input name="tanggal_periksa" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker">
                                 <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3"  style="display: none;">
                     <div class="form-group">
-                        <label>Karantina</label>
+                        <label>Start Karantina</label>
                         <div>
                             <div class="input-group">
-                            <input class="form-control input-daterange-datepicker" type="text" name="daterange"/>
-                                <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+                            <input class="form-control" type="text" name="start_karantina"  value=" <?php
+                            echo date("d-M-Y");
+                            ?>" readonly>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-3"  style="display: none;">
+                    <div class="form-group">
+                        <label>Finish Karantina</label>
+                        <div>
+                            <div class="input-group">
+                            <input class="form-control" type="text" name="finish_karantina"   value="<?php
+                    $date = date_create();
+                            date_add($date, date_interval_create_from_date_string('14 days'));
+                            echo date_format($date, "d-M-Y");
+                            ?>"readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Status Karantina<span class="text-danger">*</span></label>
+                            <select name="status_karantina" class="form-control">
+                            <option value="">--Pilih--</option>
+                            <option value="KARANTINA MANDIRI">Karantina Mandiri</option>
+                            <option value="RAWAT JALAN">Rawat Jalan</option>
+                            <option value="RAWAT INAP">Rawat Inap</option>
+                            </select>
+                        </div>
+                    </div>
 
                 <div class="col-lg-12">
                     <div class="form-group">

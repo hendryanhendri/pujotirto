@@ -28,21 +28,10 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
 
-        $dateRange  = $this->input->post("daterange");
-        $resultDate = explode('-', $dateRange);
-        $startDate      = $resultDate[0];
-        $endDate        = $resultDate[1];
-        /* convert startdate */
-        $dateStart      = strtotime($startDate);
-        $startResult    = date('Y-m-d', $dateStart);
-        /* convert enddate */
-        $DateEnd        = strtotime($endDate);
-        $endResult      = date('Y-m-d', $DateEnd);
-
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
-            'start_karantina'   => $startResult,
-            'finish_karantina'  => $endResult,
+            'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
+            'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
             'status_karantina'  => 'ON KARANTINA', 
         );
         $insert_karantina = $this->dataModelPerantau->getInsertDataKarantina($data_karantina);
@@ -101,22 +90,11 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
 
-        $dateRange  = $this->input->post("daterange");
-        $resultDate = explode('-', $dateRange);
-        $startDate      = $resultDate[0];
-        $endDate        = $resultDate[1];
-        /* convert startdate */
-        $dateStart      = strtotime($startDate);
-        $startResult    = date('Y-m-d', $dateStart);
-        /* convert enddate */
-        $DateEnd        = strtotime($endDate);
-        $endResult      = date('Y-m-d', $DateEnd);
-
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
-            'start_karantina'   => $startResult,
-            'finish_karantina'  => $endResult,
-            'status_karantina'  => 'ON KARANTINA', 
+            'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
+            'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
+            'status_karantina'  => $this->input->post('status_karantina'), 
         );
         $insert_karantina = $this->dataModelPerantau->getInsertDataKarantina($data_karantina);
         
@@ -135,7 +113,7 @@ class Perantau extends CI_Controller {
             'status_'           => 'PDP',
             'source_data'       => 'NON PERANTAU',
             'keterangan'        => $this->input->post('keterangan'),
-            'tanggal_sakit'    => date("Y-m-d", strtotime($this->input->post('tanggal_sakit'))),
+            'tanggal_periksa'   => date("Y-m-d", strtotime($this->input->post('tanggal_periksa'))),
             'created_by'        => $this->session->userdata('fullname'),
             'created_date'      => date("Y-m-d H:i:s") 
         );

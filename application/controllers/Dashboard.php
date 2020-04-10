@@ -12,10 +12,13 @@ class Dashboard extends CI_Controller {
 
     public function index()
     {
+        $this->load->library('user_agent');
         $value = array(
             'visit_date'    => date("Y-m-d H:i:s"),
             'pj_ip'         => $this->input->ip_address(),
             'pj_version'    => $_SERVER['HTTP_USER_AGENT'],
+            'pj_browser'    => $this->agent->browser(),
+            'pj_version_browser' => $this->agent->version(),
             'pj_os'         => php_uname(),
             'pages'         => 'Dashboard',
         );

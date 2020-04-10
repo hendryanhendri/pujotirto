@@ -121,13 +121,29 @@ if(!empty($info))
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3"  style="display: none;">
                     <div class="form-group">
-                        <label>Karantina</label>
+                        <label>Start Karantina</label>
                         <div>
                             <div class="input-group">
-                            <input class="form-control input-daterange-datepicker" type="text" name="daterange"/>
-                                <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+                            <input class="form-control" type="text" name="start_karantina"  value=" <?php
+                            echo date("d-M-Y");
+                            ?>" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"  style="display: none;">
+                    <div class="form-group">
+                        <label>Finish Karantina</label>
+                        <div>
+                            <div class="input-group">
+                            <input class="form-control" type="text" name="finish_karantina"  value="<?php
+                    $date = date_create();
+                            date_add($date, date_interval_create_from_date_string('14 days'));
+                            echo date_format($date, "d-M-Y");
+                            ?>"readonly>
                             </div>
                         </div>
                     </div>
