@@ -15,6 +15,8 @@ class Add_users extends CI_Controller {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_users';
 
+        $result['getUsers'] = $this->getModelUsers->getDataUsers()->result();
+
         $this->load->view('backend/vw_home', $result);
         
     }

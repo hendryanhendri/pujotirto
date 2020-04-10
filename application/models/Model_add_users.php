@@ -9,6 +9,11 @@ class Model_add_users extends CI_Model {
         $this->load->database();
         date_default_timezone_set('Asia/Jakarta');
     }
+
+    public function getDataUsers()
+    {
+        return $this->db->get('t_users');
+    }
     
 
     
