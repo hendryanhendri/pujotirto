@@ -133,9 +133,9 @@
                 <?php }?>
             </div>
         </div>
-                        <!-- end row -->
 
-    <div class="row">
+
+    <!-- <div class="row">
         <div class="col-lg-6">
             <div class="card-box card">
                 <h4 class="m-t-0">Total Revenue</h4>
@@ -151,7 +151,7 @@
                 </div>
                 <div id="dashboard-bar-stacked" style="height: 300px;"></div>
             </div>
-        </div> <!-- end col -->
+        </div>
 
         <div class="col-lg-6">
             <div class="card-box card">
@@ -168,8 +168,8 @@
                 </div>
                 <div id="dashboard-line-chart" style="height: 300px;"></div>
             </div>
-        </div> <!-- end col -->
-    </div> <!-- end row -->
+        </div> 
+    </div>  -->
 
 
 <div class="row">
