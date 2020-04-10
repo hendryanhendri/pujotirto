@@ -56,6 +56,12 @@ class Model_home extends CI_Model {
         $this->db->where('status_', 'SEMBUH');
         return $this->db->get('t_perantau');
     }
+
+    public function getDataHistori()
+    {
+        return $this->db->get('t_histori_aktifitas');
+
+    }
     
 
 

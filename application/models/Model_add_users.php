@@ -14,6 +14,8 @@ class Model_add_users extends CI_Model {
     {
         return $this->db->get('t_users');
     }
+
+    
     
 
     
