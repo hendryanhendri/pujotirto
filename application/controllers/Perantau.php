@@ -59,7 +59,7 @@ class Perantau extends CI_Controller {
             'kecamatan'         => $this->input->post('kecamatan'),
             'kabupaten'         => $this->input->post('kabupaten'),
             'no_telf'           => $this->input->post('no_telf'),
-            'status_perantau'   => 'ODP',
+            'status_'           => 'ODP',
             'source_data'       => 'PERANTAU',
             'kota_perantau'     => $this->input->post('kota_perantau'),
             'keterangan'        => $this->input->post('keterangan'),

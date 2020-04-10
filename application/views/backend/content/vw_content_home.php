@@ -13,50 +13,61 @@
             
         <div class="row">
             <div class="col-sm-3">
+                <?php foreach($getPositif as $row3){?>
                 <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Positif</center></h4><hr>
-                    <h2 class="m-b-20"><font color="blue"><center>0</font> <h5>Orang<h5></center></h2>
+                    <h2 class="m-b-20"><font color="blue"><center><?php echo $row3->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
-
+                <?php }?>
             </div>
 
             <div class="col-sm-3">
+            <?php foreach($getSembuh as $row4){?>
                 <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Sembuh</center></h4><hr>
-                    <h2 class="m-b-20"><font color="green"><center>0</font> <h5>Orang<h5></center></h2>
+                    <h2 class="m-b-20"><font color="green"><center><?php echo $row4->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
+            <?php }?>
             </div>
 
             <div class="col-sm-3">
+                <?php foreach($getMeninggal as $row5){?>
                 <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Meninggal</center></h4><hr>
-                    <h2 class="m-b-20"><font color="red"><center>0</font> <h5>Orang<h5></center></h2>
+                    <h2 class="m-b-20"><font color="red"><center><?php echo $row5->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
+                <?php }?>
             </div>
 
             <div class="col-sm-3">
+                <?php foreach($getPemudik as $row2){?>
                 <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Pemudik</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#ffcc00"><center>10</font> <h5>Orang<h5></center></h2>
+                    <h2 class="m-b-20"><font color="#ffcc00"><center><?php echo $row2->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
+                <?php }?>
             </div>
             <div class="col-sm-6">
+                <?php foreach($getODP as $row){?>
                 <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#804d00"><center>10</font> <h5>Orang<h5></center></h2>
+                    <h2 class="m-b-20"><font color="#804d00"><center><?php echo $row->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
+                <?php }?>
             </div>
             <div class="col-sm-6">
+                <?php foreach($getPDP as $row1){?>
                 <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total PDP</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#993300"><center>0</font> <h5>Orang<h5></center></h2>
+                    <h2 class="m-b-20"><font color="#993300"><center><?php echo $row1->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
+                <?php }?>
             </div>
         </div>
                         <!-- end row -->
