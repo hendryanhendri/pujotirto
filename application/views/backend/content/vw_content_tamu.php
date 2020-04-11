@@ -136,7 +136,7 @@ if(!empty($info))
                 <div class="col-lg-6">
                         <div class="form-group">
                             <label for="userName">Nama Tujuan<span class="text-danger">*</span></label>
-                            <input type="text" name="nama_tujuan" parsley-trigger="change" required class="form-control">
+                            <input type="text" name="nama_tujuan" parsley-trigger="change" required class="form-control" placeholder="Nama orang yang dituju">
                         </div>
                 </div>
 
