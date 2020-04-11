@@ -225,7 +225,7 @@
          </div>
         </div>
     </div>
-    <div class="col-sm-12">
+    <!-- <div class="col-sm-12">
             <div class="card-box card">
         <?php 
             foreach($get_data_covid as $row){?>
@@ -240,7 +240,7 @@
             </div>
         <?php }?>
             </div>
-        </div>
+        </div> -->
 </div>
 
 </div>

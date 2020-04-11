@@ -95,6 +95,7 @@ class Perantau extends CI_Controller {
             'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
             'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
             'status_karantina'  => $this->input->post('status_karantina'), 
+            'fasilitas_kesehatan'   => $this->input->post('fasilitas_kesehatan'),
         );
         $insert_karantina = $this->dataModelPerantau->getInsertDataKarantina($data_karantina);
         
@@ -112,7 +113,6 @@ class Perantau extends CI_Controller {
             'no_telf'               => $this->input->post('no_telf'),
             'status_'               => 'PDP',
             'source_data'           => 'NON PERANTAU',
-            'fasilitas_kesehatan'   => $this->input->post('fasilitas_kesehatan'),
             'keterangan'            => $this->input->post('keterangan'),
             'tanggal_periksa'       => date("Y-m-d", strtotime($this->input->post('tanggal_periksa'))),
             'created_by'            => $this->session->userdata('fullname'),
@@ -139,6 +139,56 @@ class Perantau extends CI_Controller {
 
         redirect('perantau/add_non_perantau');
 
+    }
+
+    public function add_data_tamu($id='')
+    {
+        $this->Secure_access->getsecurity();
+        $result['content']  = 'backend/content/vw_content_tamu';
+        $result['dataTamu'] = $this->dataModelPerantau->getDataTamu()->result();
+        $this->load->view('backend/vw_home', $result);
+    }
+
+    public function saveDataTamu($id='')
+    {
+        $this->Secure_access->getsecurity();
+        $data_tamu = array(
+            'nik'               => $this->input->post('nik'),
+            'nama_lengkap'      => $this->input->post('nama_lengkap'),
+            'jenkel'            => $this->input->post('jenkel'),
+            'nomor_hp_tamu'     => $this->input->post('nomor_hp_tamu'),
+            'kelurahan_tamu'    => $this->input->post('kelurahan_tamu'),
+            'dusun_tamu'        => $this->input->post('dusun_tamu'),
+            'rw_tamu'           => $this->input->post('rw_tamu'),
+            'rt_tamu'           => $this->input->post('rt_tamu'),
+            'kecamatan_tamu'    => $this->input->post('kecamatan_tamu'),
+            'kabupaten_tamu'    => $this->input->post('kabupaten_tamu'),
+            'nama_tujuan'       => $this->input->post('nama_tujuan'),
+            'lama_berkunjung'   => $this->input->post('lama_berkunjung'),
+            'tujuan_berkunjung' => $this->input->post('tujuan_berkunjung'),
+            'created_by'        => $this->session->userdata('fullname'),
+            'created_date'      => date("Y-m-d H:i:s"),
+        );
+        $insert = $this->dataModelPerantau->getInsertDataTamu($data_tamu);
+
+        $data_aktifitas =array(
+            'nik'           => $this->input->post('nik'),
+            'fullname'      => $this->session->userdata('fullname'),
+            'form_'         => 'FORM ADD TAMU',
+            'action_'       => 'ADD',
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+        $insert_aktifitas = $this->dataModelPerantau->getInsertDataAktifitas($data_aktifitas);
+
+        echo json_encode(array("status" => TRUE));
+        $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <i class="mdi mdi-check-all"></i>
+        <strong>Sukses!</strong> Yeay data berhasil disimpan !
+    </div></div><center>');
+
+        redirect('perantau/add_data_tamu');
     }
 
 }

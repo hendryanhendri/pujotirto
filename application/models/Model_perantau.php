@@ -25,6 +25,16 @@ class Model_perantau extends CI_Model {
     {
         $this->db->insert('t_histori_aktifitas', $data_aktifitas);
     }
+
+    public function getInsertDataTamu($data_tamu)
+    {
+        $this->db->insert('t_tamu', $data_tamu);
+    }
+
+    public function getDataTamu()
+    {
+        return $this->db->get('t_tamu');
+    }
     
 
     

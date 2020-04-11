@@ -97,6 +97,7 @@
                             <ul class="submenu">
                                 <li><a href="<?php echo base_url();?>perantau/add_perantau">Data ODP</a></li>
                                 <li><a href="<?php echo base_url();?>perantau/add_non_perantau">Data PDP</a></li>
+                                <li><a href="<?php echo base_url();?>perantau/add_data_tamu">Data Tamu</a></li>
                                 <li><a href="<?php echo base_url();?>home/master_data">Master Data</a></li>
                             </ul>
                         </li>
@@ -244,6 +245,14 @@ window.setTimeout(function() {
         $(this).remove();
     });
 }, 4000);
+</script>
+
+<script>
+$(document).ready(function(){
+    $('#show').click(function() {
+      $('.form_tamu').toggle("slide");
+    });
+});
 </script>
     </body>
 </html>
