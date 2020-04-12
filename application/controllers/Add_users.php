@@ -71,6 +71,7 @@ class Add_users extends CI_Controller {
 
     public function ajax_delete($id)
     {
+        $this->Secure_access->getsecurity();
         $this->getModelUsers->DeletedByIdUsers($id);
         echo json_encode(array("status" => TRUE));
 
@@ -78,7 +79,7 @@ class Add_users extends CI_Controller {
             'nik'           => $id,
             'fullname'      => $this->session->userdata('fullname'),
             'form_'         => 'FORM DELETE USERS',
-            'action_'       => 'ADD',
+            'action_'       => 'DELETED',
             'created_date'  => date("Y-m-d H:i:s"),
         );
         $insert_aktifitas = $this->getModelUsers->getInsertDataAktifitas($data_aktifitas);
@@ -94,6 +95,7 @@ class Add_users extends CI_Controller {
 
     public function updateDataUsers()
     {
+        $this->Secure_access->getsecurity();
         $data_usersupdate   =array(
             'id_users'      => $this->input->post('id_users'),
             'username'      => $this->input->post('username'),
@@ -105,6 +107,17 @@ class Add_users extends CI_Controller {
             'updated_date'  => date("Y-m-d H:i:s")
         );
         $this->getModelUsers->UpdateUsers(array('id_users' => $this->input->post('id_users')), $data_usersupdate);
+
+        $data_aktifitas =array(
+            'nik'           => $this->input->post('id_users'),
+            'fullname'      => $this->session->userdata('fullname'),
+            'form_'         => 'FORM UPDATE USERS',
+            'action_'       => 'UPDATED',
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+        $insert_aktifitas = $this->getModelUsers->getInsertDataAktifitas($data_aktifitas);
+
+        echo json_encode(array("status" => TRUE));
 
         $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-success alert-dismissible fade in" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
