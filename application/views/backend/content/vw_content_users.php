@@ -19,11 +19,11 @@ if(!empty($info))
                     <span class="icon-span-filestyle glyphicon glyphicon-plus">
                 </span> 
             <span class="buttonText" id="show_div_users">Tambah Data</span></label></span>
-            <span class="group-span-filestyle " tabindex="0">
+            <a href="<?php echo base_url();?>add_users"><span class="group-span-filestyle " tabindex="0">
                 <label for="filestyle-1" class="btn btn-default ">
                     <span class="icon-span-filestyle glyphicon glyphicon-refresh">
                 </span> 
-            <a href="<?php echo base_url();?>add_users"><span class="buttonText">Reload</span></a></label></span>
+            <span class="buttonText">Reload</span></label></span></a>
         </div></br>
             <table id="datatable-buttons" class="table table-striped table-bordered">
                 <thead>
