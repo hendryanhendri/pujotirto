@@ -62,6 +62,14 @@ class Model_home extends CI_Model {
         return $this->db->get('t_histori_aktifitas');
 
     }
+
+    public function getDataPerRw()
+    {
+        $this->db->select('count(*) as total, rw');
+        $this->db->from('t_perantau');
+        $this->db->group_by('rw');
+        return $this->db->get();
+    }
     
 
 

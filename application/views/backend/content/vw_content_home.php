@@ -73,7 +73,31 @@
                         <!-- end row -->
 
     <div class="row">
-        <div class="col-lg-6">
+<div class="col-lg-6">
+    <div class="card-box card">
+        <div class="m-b-20 table-responsive">
+           <div class="bootstrap-filestyle input-group">
+        </div></br>
+            <table id="datatable-buttons" class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                    <th>RW</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($dataRw as $row){?>
+                <tr>
+                    <td><?php echo $row->rw; ?></td>
+                    <td><?php echo $row->total; ?></td>
+                </tr>
+                <?php }?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+        <!-- <div class="col-lg-6">
             <div class="card-box card">
                 <h4 class="m-t-0">Total Revenue</h4>
                 <div class="text-center">
@@ -88,9 +112,9 @@
                 </div>
                 <div id="dashboard-bar-stacked" style="height: 300px;"></div>
             </div>
-        </div> <!-- end col -->
+        </div> -->
 
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
             <div class="card-box card">
                 <h4 class="m-t-0">Analisa Pemudik</h4>
                 <div class="text-center">
@@ -105,7 +129,10 @@
                 </div>
                 <div id="dashboard-line-chart" style="height: 300px;"></div>
             </div>
-        </div> <!-- end col -->
+        </div>  -->
+
+        <!-- end col -->
+
         <!-- <div class="col-sm-12">
             <div class="card-box card">
         <?php 

@@ -252,6 +252,10 @@ $(document).ready(function(){
     $('#show').click(function() {
       $('.form_tamu').toggle("slide");
     });
+
+    $('#show_div_users').click(function() {
+      $('.form_users').toggle("slide");
+    });
 });
 </script>
     </body>

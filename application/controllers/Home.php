@@ -20,7 +20,7 @@ class Home extends CI_Controller {
         // $characters = json_decode($data_url); // decode the JSON feed
     
         // $result['get_data_covid'] = $characters;
-        
+        $result['dataRw']   = $this->dataModelHome->getDataPerRw()->result();
         $result['getODP']       = $this->dataModelHome->getDataODP()->result();
         $result['getPDP']       = $this->dataModelHome->getDataPDP()->result();
         $result['getPemudik']   = $this->dataModelHome->getDataPemudik()->result();

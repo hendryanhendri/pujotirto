@@ -12,7 +12,7 @@
                 <tr>
                     <th>Id Aktifitas</th>
                     <th>Nik / Ktp</th>
-                    <th>Pengubah</th>
+                    <th>Pengubah/Penambah</th>
                     <th>Form</th>
                     <th>Aksi</th>
                     <th>Dibuat Tanggal</th>
