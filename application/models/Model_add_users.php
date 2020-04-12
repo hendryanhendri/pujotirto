@@ -30,6 +30,11 @@ class Model_add_users extends CI_Model {
         $this->db->delete('t_users');
       }
 
+      public function UpdateUsers($where, $data_usersupdate){
+        $this->db->update('t_users', $data_usersupdate, $where);
+        return $this->db->affected_rows();
+      }
+
     public function updateById($id)
       {
         $this->db->from('t_users');

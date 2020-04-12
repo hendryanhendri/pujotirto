@@ -36,6 +36,8 @@ class Add_users extends CI_Controller {
             'level'         => 'Dewa',
             'email'         => $this->input->post('email'),
             'phone'         => $this->input->post('phone'),
+            'created_by'   => $this->session->userdata('fullname'),
+            'created_date'  => date("Y-m-d H:i:s")
         );
         $insert = $this->getModelUsers->getInsertDataUsers($data_users);
 
@@ -88,6 +90,32 @@ class Add_users extends CI_Controller {
         <strong>Sukses!</strong> Yeay data berhasil dihapus !
     </div></div><center>');
 
+    }
+
+    public function updateDataUsers()
+    {
+        $data_usersupdate   =array(
+            'id_users'      => $this->input->post('id_users'),
+            'username'      => $this->input->post('username'),
+            'fullname'      => $this->input->post('fullname'),
+            'jenkel'        => $this->input->post('jenkel'),
+            'email'         => $this->input->post('email'),
+            'phone'         => $this->input->post('phone'),
+            'updated_by'    => $this->session->userdata('fullname'),
+            'updated_date'  => date("Y-m-d H:i:s")
+        );
+        $this->getModelUsers->UpdateUsers(array('id_users' => $this->input->post('id_users')), $data_usersupdate);
+
+        $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <i class="mdi mdi-check-all"></i>
+        <strong>Sukses!</strong> Yeay data berhasil di updated !
+        </div></div><center>');
+
+        redirect('add_users');
+
+        
     }
 
 }
