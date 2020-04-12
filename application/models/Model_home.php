@@ -70,6 +70,11 @@ class Model_home extends CI_Model {
         $this->db->group_by('rw');
         return $this->db->get();
     }
+
+    public function getDataMaster()
+    {
+        return $this->db->get('vw_master_data');
+    }
     
 
 

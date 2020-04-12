@@ -54,8 +54,9 @@ class Home extends CI_Controller {
     public function master_data()
     {
         $result['content']  = 'backend/content/vw_content_masterdata';
+        $result['getMasterData'] = $this->dataModelHome->getDataMaster()->result();
 
-        $this->load->view('backend/vw_home',$result);
+        $this->load->view('backend/vw_home', $result);
     }
 
 }
