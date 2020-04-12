@@ -255,8 +255,61 @@ $(document).ready(function(){
 
     $('#show_div_users').click(function() {
       $('.form_users').toggle("slide");
+      $('#form_update_users').hide();
     });
+
 });
+</script>
+
+<script>
+function EditUsers(id){
+    save_method = 'update';
+    $('#form_update_users').toggle("slide");
+    $('.form_users').hide();
+
+    $.ajax({
+        url:"<?php echo site_url('add_users/ajax_edit'); ?>/"+ id,
+        type:"GET",
+        dataType: "JSON",
+        success:function(data)
+        {
+            $('[name="id_users"]').val(data.id_users);
+            $('[name="username"]').val(data.username);
+            $('[name="fullname"]').val(data.fullname);
+            $('[name="email"]').val(data.email);
+            $('[name="phone"]').val(data.phone);
+            $('[name="jenkel"]').val(data.jenkel);
+        },
+        error : function (jqXHR, textStatus, errorThrown)
+        {
+        alert('Error get data from ajax');
+      }
+
+    });
+
+}
+
+
+function DeleteUsers(id){
+    if(confirm('Anda yakin akan menghapus data ini.?')){
+        $.ajax({
+            url : "<?php echo site_url('add_users/ajax_delete'); ?>/"+id,
+            type: "POST",
+            dataType: "JSON",
+            success:function(data){
+                window.location = "<?php echo base_url(); ?>add_users"
+            },
+            error:function(jqXHR, textStatus, errorThrown)
+            {
+                alert('Error penghapusan data')
+            }
+
+        });
+        
+    }
+
+}
+
 </script>
     </body>
 </html>

@@ -25,6 +25,20 @@ class Model_add_users extends CI_Model {
         $this->db->insert('t_histori_aktifitas', $data_aktifitas);
     }
 
+    public function DeletedByIdUsers($id){
+        $this->db->where('id_users', $id);
+        $this->db->delete('t_users');
+      }
+
+    public function updateById($id)
+      {
+        $this->db->from('t_users');
+        $this->db->where('id_users', $id);
+        $query = $this->db->get();
+
+        return $query->row();
+      }
+
     public function createUsersId(){
         $this->db->select('RIGHT(t_users.id_users,6) as kode', FALSE);
         $this->db->order_by('id_users', 'DESC');

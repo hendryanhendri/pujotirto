@@ -39,7 +39,6 @@ class Add_users extends CI_Controller {
         );
         $insert = $this->getModelUsers->getInsertDataUsers($data_users);
 
-
         $data_aktifitas =array(
             'nik'           => $getId,
             'fullname'      => $this->session->userdata('fullname'),
@@ -59,6 +58,35 @@ class Add_users extends CI_Controller {
     </div></div><center>');
 
         redirect('add_users');
+
+    }
+
+    public function ajax_edit($id){
+        $this->Secure_access->getsecurity();
+        $data = $this->getModelUsers->updateById($id);
+        echo json_encode($data);
+      }
+
+    public function ajax_delete($id)
+    {
+        $this->getModelUsers->DeletedByIdUsers($id);
+        echo json_encode(array("status" => TRUE));
+
+        $data_aktifitas =array(
+            'nik'           => $id,
+            'fullname'      => $this->session->userdata('fullname'),
+            'form_'         => 'FORM DELETE USERS',
+            'action_'       => 'ADD',
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+        $insert_aktifitas = $this->getModelUsers->getInsertDataAktifitas($data_aktifitas);
+
+        $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-info alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <i class="mdi mdi-check-all"></i>
+        <strong>Sukses!</strong> Yeay data berhasil dihapus !
+    </div></div><center>');
 
     }
 
