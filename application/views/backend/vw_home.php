@@ -257,7 +257,20 @@ $(document).ready(function(){
       $('.form_users').toggle("slide");
       $('#form_update_users').hide();
     });
+});
+</script>
 
+
+<script>
+$(document).ready(function(){
+    $('#show_div_odp').click(function() {
+      $('.form_odp').toggle("slide");
+    });
+
+    // $('#show_div_users').click(function() {
+    //   $('.form_users').toggle("slide");
+    //   $('#form_update_users').hide();
+    // });
 });
 </script>
 
@@ -309,7 +322,6 @@ function DeleteUsers(id){
     }
 
 }
-
 </script>
     </body>
 </html>

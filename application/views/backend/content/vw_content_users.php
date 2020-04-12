@@ -13,12 +13,12 @@ if(!empty($info))
 <div class="col-lg-12">
     <div class="card-box card">
         <div class="m-b-20 table-responsive">
-           <div class="bootstrap-filestyle input-group">
+           <div class="bootstrap-filestyle input-group" id="show_div_users">
             <span class="group-span-filestyle" tabindex="0">
                 <label for="filestyle-1" class="btn btn-default ">
                     <span class="icon-span-filestyle glyphicon glyphicon-plus">
                 </span> 
-            <span class="buttonText" id="show_div_users">Tambah Data</span></label></span>
+            <span class="buttonText">Tambah Data</span></label></span>
             <a href="<?php echo base_url();?>add_users"><span class="group-span-filestyle " tabindex="0">
                 <label for="filestyle-1" class="btn btn-default ">
                     <span class="icon-span-filestyle glyphicon glyphicon-refresh">

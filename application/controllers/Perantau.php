@@ -21,6 +21,7 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_perantau';
+        $result['getODP']   = $this->dataModelPerantau->getDataOdp()->result();
         $this->load->view('backend/vw_home', $result);
     }
 

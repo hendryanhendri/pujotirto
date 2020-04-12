@@ -82,16 +82,21 @@
                 <thead>
                 <tr>
                     <th>RW</th>
-                    <th>Total</th>
+                    <th>ODP</th>
+                    <th>PDP</th>
+                    <th>Positif</th>
+                    <th>Sembuh</th>
+                    <th>Meninggal</th> 
                 </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($dataRw as $row){?>
+                    <!-- <?php foreach($dataRw as $row){?>
                 <tr>
                     <td><?php echo $row->rw; ?></td>
+
                     <td><?php echo $row->total; ?></td>
                 </tr>
-                <?php }?>
+                <?php }?> -->
                 </tbody>
             </table>
         </div>

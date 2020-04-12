@@ -35,8 +35,14 @@ class Model_perantau extends CI_Model {
     {
         return $this->db->get('t_tamu');
     }
-    
 
+    public function getDataOdp()
+    {
+        $this->db->select('*');
+        $this->db->where('status_', 'ODP');
+        $this->db->from('vw_master_data');
+        return $this->db->get();
+    }
     
 
 }
