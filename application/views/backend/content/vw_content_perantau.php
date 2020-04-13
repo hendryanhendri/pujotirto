@@ -62,13 +62,13 @@ if(!empty($info))
                     <td><?php echo date_format($date_pulang, "d/m/Y"); ?></td> 
                     <td><?php echo date_format($date_karantina_finish, "d/m/Y"); ?></td>
                 
-                    <?php if($row->waktu_karantina == 0){?>
+                    <?php if($row->waktu_karantina <= 0){?>
                         <td><span class="badge badge-success">Karantina Selesai</span></td>
                     <?php }if($row->waktu_karantina == 14){?>
                         <td><span class="badge badge-warning">Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
                     <?php } if($row->waktu_karantina >= 1 && $row->waktu_karantina <= 13){?>
                         <td><span class="badge badge-danger">Sisa Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
-                    <?php } ?>
+                    <?php }?>
 
                     <td><?php echo $row->kota_perantau; ?></td>
                     <td><button type="button" class="btn btn-sm btn-info" onclick="EditOdp('<?php echo $row->nik; ?>')">Edit</button></td>
