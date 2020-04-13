@@ -40,9 +40,11 @@ if(!empty($info))
                     <th>Kecamatan</th>
                     <th>Kabupaten</th>
                     <th>Status</th>
-                    <th>Masa Karantina</th>
+                    <th>Waktu Karantina</th>
+                    <th>Karantina Berakhir</th>
                     <th>Status Karantina</th>
                     <th>Kota Perantau</th>
+                    <th>Pengaturan</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -59,10 +61,18 @@ if(!empty($info))
                     <td><?php echo $row->kecamatan; ?></td>
                     <td><?php echo $row->kabupaten; ?></td>
                     <td><span class="badge badge-warning"><?php echo $row->status_; ?></span></td>
-                    <td><?php echo $row->tanggal_pulang; ?></td>
-                    <td><?php echo $row->status_karantina; ?></td>
-                    <td><?php echo $row->kota_perantau; ?></td>
+                    <td><?php echo $row->tanggal_pulang; ?></td> 
+                    <td><?php echo $row->finish_karantina; ?></td>
+                
+                    <?php if($row->waktu_karantina == 0){?>
+                        <td><span class="badge badge-success">Karantina Selesai</span></td>
+                    <?php }if($row->waktu_karantina == 14){?>
+                        <td><span class="badge badge-warning">Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
+                    <?php } if($row->waktu_karantina >= 1 && $row->waktu_karantina <= 13){?>
+                        <td><span class="badge badge-danger">Sisa Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
+                    <?php } ?>
 
+                    <td><?php echo $row->kota_perantau; ?></td>
                     <td><button type="button" class="btn btn-sm btn-info" onclick="EditOdp('<?php echo $row->nik; ?>')">Edit</button></td>
                 </tr>
                 <?php }?>

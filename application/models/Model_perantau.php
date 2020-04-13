@@ -40,7 +40,7 @@ class Model_perantau extends CI_Model {
     {
         $this->db->select('*');
         $this->db->where('status_', 'ODP');
-        $this->db->from('vw_master_data');
+        $this->db->from('vw_time_karantina');
         return $this->db->get();
     }
     
