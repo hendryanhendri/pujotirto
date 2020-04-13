@@ -17,6 +17,8 @@ if(!empty($info))
                 <thead>
                 <tr>
                     <th>Nik/Ktp</th>
+                    <th>Status</th>
+                    <th>Status Karantina</th>
                     <th>Nama Lengkap</th>
                     <th>Jenis Kelamin</th>
                     <th>Nomor Telf</th>
@@ -26,8 +28,8 @@ if(!empty($info))
                     <th>Kelurahan</th>
                     <th>Kecamatan</th>
                     <th>Kabupaten</th>
-                    <th>Status</th>
-                    <th>Status Karantina</th>
+                    <th>Waktu Karantina</th>
+                    <th>Karantina Berakhir</th>
                 </tr>
                 </thead>
 
@@ -35,6 +37,20 @@ if(!empty($info))
                 <?php foreach($getMasterData as $row){?> 
                 <tr>
                     <td><?php echo $row->nik; ?></td>
+                    <?php if($row->status_ == 'ODP'){?>
+                        <td><span class="badge badge-primary"><?php echo $row->status_; ?></span></td>
+                    <?php }if($row->status_ == 'PDP'){?>
+                        <td><span class="badge badge-warning"><?php echo $row->status_; ?></span></td>
+                    <?php } if($row->status_ == 'POSITIF'){?>
+                        <td><span class="badge badge-danger"><?php echo $row->status_; ?></span></td>
+                    <?php } ?>
+                    <?php if($row->waktu_karantina == 0){?>
+                        <td><span class="badge badge-success">Karantina Selesai</span></td>
+                    <?php }if($row->waktu_karantina == 14){?>
+                        <td><span class="badge badge-warning">Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
+                    <?php } if($row->waktu_karantina >= 1 && $row->waktu_karantina <= 13){?>
+                        <td><span class="badge badge-danger">Sisa Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
+                    <?php } ?>
                     <td><?php echo $row->nama_lengkap; ?></td>
                     <td><?php echo $row->jenkel; ?></td>
                     <td><?php echo $row->no_telf; ?></td>
@@ -44,14 +60,8 @@ if(!empty($info))
                     <td><?php echo $row->kelurahan; ?></td>
                     <td><?php echo $row->kecamatan; ?></td>
                     <td><?php echo $row->kabupaten; ?></td>
-                    <?php if($row->status_ == 'ODP'){?>
-                        <td><span class="badge badge-primary"><?php echo $row->status_; ?></span></td>
-                    <?php }if($row->status_ == 'PDP'){?>
-                        <td><span class="badge badge-warning"><?php echo $row->status_; ?></span></td>
-                    <?php } if($row->status_ == 'POSITIF'){?>
-                        <td><span class="badge badge-danger"><?php echo $row->status_; ?></span></td>
-                    <?php } ?>
-                    <td><?php echo $row->status_karantina; ?></td>
+                    <td><?php echo $row->tanggal_pulang; ?></td> 
+                    <td><?php echo $row->finish_karantina; ?></td>
                 </tr>
                 <?php }?>
                 </tbody>

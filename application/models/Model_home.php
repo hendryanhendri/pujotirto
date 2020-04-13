@@ -73,7 +73,7 @@ class Model_home extends CI_Model {
 
     public function getDataMaster()
     {
-        return $this->db->get('vw_master_data');
+        return $this->db->get('vw_time_karantina');
     }
     
 
