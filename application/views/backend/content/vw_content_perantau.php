@@ -36,9 +36,6 @@ if(!empty($info))
                     <th>Rt</th>
                     <th>Rw</th>
                     <th>Dusun</th>
-                    <th>Kelurahan</th>
-                    <th>Kecamatan</th>
-                    <th>Kabupaten</th>
                     <th>Status</th>
                     <th>Waktu Karantina</th>
                     <th>Karantina Berakhir</th>
@@ -57,9 +54,6 @@ if(!empty($info))
                     <td><?php echo $row->rw; ?></td>
                     <td><?php echo $row->no_telf; ?></td>
                     <td><?php echo $row->dusun; ?></td>
-                    <td><?php echo $row->kelurahan; ?></td>
-                    <td><?php echo $row->kecamatan; ?></td>
-                    <td><?php echo $row->kabupaten; ?></td>
                     <td><span class="badge badge-warning"><?php echo $row->status_; ?></span></td>
                     <td><?php echo $row->tanggal_pulang; ?></td> 
                     <td><?php echo $row->finish_karantina; ?></td>
