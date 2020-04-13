@@ -44,13 +44,13 @@ if(!empty($info))
                     <?php } if($row->status_ == 'POSITIF'){?>
                         <td><span class="badge badge-danger"><?php echo $row->status_; ?></span></td>
                     <?php } ?>
-                    <?php if($row->waktu_karantina == 0){?>
+                    <?php if($row->waktu_karantina <= 0){?>
                         <td><span class="badge badge-success">Karantina Selesai</span></td>
                     <?php }if($row->waktu_karantina == 14){?>
                         <td><span class="badge badge-warning">Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
                     <?php } if($row->waktu_karantina >= 1 && $row->waktu_karantina <= 13){?>
                         <td><span class="badge badge-danger">Sisa Karantina <?php echo $row->waktu_karantina; ?> Hari</span></td>
-                    <?php } ?>
+                    <?php }?>
                     <td><?php echo $row->nama_lengkap; ?></td>
                     <td><?php echo $row->jenkel; ?></td>
                     <td><?php echo $row->no_telf; ?></td>
