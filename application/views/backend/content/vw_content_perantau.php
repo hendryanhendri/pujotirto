@@ -283,7 +283,7 @@ if(!empty($info))
                         <label>Tanggal Lahir</label>
                         <div>
                             <div class="input-group">
-                                <input name="ttl" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker-autoclose">
+                                <input name="ttl" type="date" class="form-control" placeholder="bulan/tanggal/tahun">
                                 <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
                             </div>
                         </div>
@@ -344,7 +344,7 @@ if(!empty($info))
                         <label>Tanggal Pulang</label>
                         <div>
                             <div class="input-group">
-                                <input name="tanggal_pulang" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker">
+                                <input name="tanggal_pulang" type="date" class="form-control" placeholder="bulan/tanggal/tahun">
                                 <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
                             </div>
                         </div>
