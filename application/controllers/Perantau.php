@@ -148,6 +148,59 @@ class Perantau extends CI_Controller {
 
     }
 
+    public function UpdateDataOdpToPdp($id='')
+    {
+        $this->Secure_access->getsecurity();
+
+        $data_karantina =array(
+            'nik'               => $this->input->post('nik'),
+            'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
+            'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
+            'status_karantina'  => $this->input->post('status_karantina'), 
+            'fasilitas_kesehatan'   => $this->input->post('fasilitas_kesehatan'),
+        );
+        $this->dataModelPerantau->UpdateKarantina(array('nik' => $this->input->post('nik')), $data_karantina);
+        
+        $data_perantau   =array(
+            'nik'                   => $this->input->post('nik'),
+            'nama_lengkap'          => $this->input->post('nama_lengkap'),
+            'jenkel'                => $this->input->post('jenkel'),
+            'rt'                    => $this->input->post('rt'), 
+            'rw'                    => $this->input->post('rw'),
+            'dusun'                 => $this->input->post('dusun'),
+            'kelurahan'             => $this->input->post('kelurahan'),
+            'kecamatan'             => $this->input->post('kecamatan'),
+            'kabupaten'             => $this->input->post('kabupaten'),
+            'no_telf'               => $this->input->post('no_telf'),
+            'status_'               => 'PDP',
+            'keterangan'            => $this->input->post('keterangan'),
+            'tanggal_periksa'       => date("Y-m-d", strtotime($this->input->post('tanggal_periksa'))),
+            'created_by'            => $this->session->userdata('fullname'),
+            'created_date'          => date("Y-m-d H:i:s") 
+        );
+        $this->dataModelPerantau->UpdateOdpToPpd(array('nik' => $this->input->post('nik')), $data_perantau);
+
+        $data_aktifitas =array(
+            'nik'           => $this->input->post('nik'),
+            'fullname'      => $this->session->userdata('fullname'),
+            'form_'         => 'FORM UPDATE TO PDP',
+            'action_'       => 'UPDATED',
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+        $insert_aktifitas = $this->dataModelPerantau->getInsertDataAktifitas($data_aktifitas);
+
+        echo json_encode(array("status" => TRUE));
+        $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-info alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <i class="mdi mdi-check-all"></i>
+        <strong>Sukses!</strong> Yeay data berhasil diupdate !
+    </div></div><center>');
+
+        redirect('perantau/add_perantau');
+
+    }
+
     public function add_data_tamu($id='')
     {
         $this->Secure_access->getsecurity();

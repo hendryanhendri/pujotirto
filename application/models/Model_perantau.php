@@ -45,6 +45,18 @@ class Model_perantau extends CI_Model {
         return $query->row();
       }
 
+      public function UpdateKarantina($where, $data_karantina){
+        $this->db->update('t_karantina', $data_karantina, $where);
+        return $this->db->affected_rows();
+      }
+
+      public function UpdateOdpToPpd($where, $data_perantau)
+      {
+        $this->db->update('t_perantau', $data_perantau, $where);
+        return $this->db->affected_rows();
+
+      }
+
     public function getDataOdp()
     {
         $this->db->select('*');
