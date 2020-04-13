@@ -80,6 +80,12 @@ class Perantau extends CI_Controller {
 
     }
 
+    public function ajax_edit($id){
+        $this->Secure_access->getsecurity();
+        $data = $this->dataModelPerantau->updateById($id);
+        echo json_encode($data);
+      }
+
     public function add_non_perantau($id='')
     {
         $this->Secure_access->getsecurity();

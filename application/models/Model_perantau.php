@@ -36,6 +36,15 @@ class Model_perantau extends CI_Model {
         return $this->db->get('t_tamu');
     }
 
+    public function updateById($id)
+      {
+        $this->db->from('t_perantau');
+        $this->db->where('nik', $id);
+        $query = $this->db->get();
+
+        return $query->row();
+      }
+
     public function getDataOdp()
     {
         $this->db->select('*');
