@@ -46,6 +46,10 @@ if(!empty($info))
                 </thead>
                 <tbody>
                     <?php foreach($getODP as $row){?>
+                        <?php 
+                        $date_karantina_finish = date_create("$row->finish_karantina");
+                        $date_pulang = date_create("$row->tanggal_pulang");
+                        ?>
                 <tr>
                     <td><?php echo $row->nik; ?></td>
                     <td><?php echo $row->nama_lengkap; ?></td>
@@ -55,8 +59,8 @@ if(!empty($info))
                     <td><?php echo $row->no_telf; ?></td>
                     <td><?php echo $row->dusun; ?></td>
                     <td><span class="badge badge-warning"><?php echo $row->status_; ?></span></td>
-                    <td><?php echo $row->tanggal_pulang; ?></td> 
-                    <td><?php echo $row->finish_karantina; ?></td>
+                    <td><?php echo date_format($date_pulang, "d/m/Y"); ?></td> 
+                    <td><?php echo date_format($date_karantina_finish, "d/m/Y"); ?></td>
                 
                     <?php if($row->waktu_karantina == 0){?>
                         <td><span class="badge badge-success">Karantina Selesai</span></td>
