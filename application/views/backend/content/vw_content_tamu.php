@@ -14,11 +14,16 @@ if(!empty($info))
     <div class="card-box card">
         <div class="m-b-20 table-responsive">
            <div class="bootstrap-filestyle input-group">
-            <span class="group-span-filestyle " tabindex="0">
+            <span class="group-span-filestyle " tabindex="0" id="show">
                 <label for="filestyle-1" class="btn btn-default ">
                     <span class="icon-span-filestyle glyphicon glyphicon-plus">
                 </span> 
-            <span class="buttonText" id="show">Tambah Data</span></label></span>
+            <span class="buttonText">Tambah Data</span></label></span>
+            <a href="<?php echo base_url();?>perantau/add_data_tamu"><span class="group-span-filestyle " tabindex="0">
+                <label for="filestyle-1" class="btn btn-default ">
+                    <span class="icon-span-filestyle glyphicon glyphicon-refresh">
+                </span> 
+            <span class="buttonText">Reload</span></label></span></a>
         </div></br>
             <table id="datatable-buttons" class="table table-striped table-bordered">
                 <thead>
