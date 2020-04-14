@@ -58,7 +58,7 @@ if(!empty($info))
                     <td><span class="badge badge-warning"><?php echo $row->status_; ?></span></td>
                     <td><?php echo $row->fasilitas_kesehatan; ?></td>
                     <td><?php echo date_format($date_pulang, "d/m/Y"); ?></td> 
-                    <td><button type="button" class="btn btn-sm btn-info" onclick="EditPdp('<?php echo $row->nik; ?>')">Edit</button></td>
+                    <td><button type="button" class="btn btn-sm btn-info" onclick="EditPdp('<?php echo $row->nik; ?>')">Masuk Positif</button></td>
                 </tr>
                 <?php }?>
                 </tbody>

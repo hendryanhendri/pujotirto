@@ -320,7 +320,7 @@ function DeleteUsers(id){
 
 }
 
-function EditOdp(id){
+function MasukPdp(id){
     save_method = 'update';
     $('#form_update_pdp').toggle("slide");
     $('.form_odp').hide();

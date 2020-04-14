@@ -71,7 +71,8 @@ if(!empty($info))
                     <?php }?>
 
                     <td><?php echo $row->kota_perantau; ?></td>
-                    <td><button type="button" class="btn btn-sm btn-info" onclick="EditOdp('<?php echo $row->nik; ?>')">Edit</button></td>
+                    <td><button type="button" class="btn btn-sm btn-warning" onclick="MasukPdp('<?php echo $row->nik; ?>')">Masuk PDP</button>
+                    <!-- <button type="button" class="btn btn-sm btn-info" onclick="EditOdp('<?php echo $row->nik; ?>')">Edit</button>--></td> 
                 </tr>
                 <?php }?>
                 </tbody>
