@@ -89,7 +89,7 @@ if(!empty($info))
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="userName">NIK / KTP<span class="text-danger">*</span></label>
-                            <input type="number" name="nik" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
+                            <input type="number" name="nik" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off" readonly
                         </div>
                     </div>
                     <div class="col-lg-6">
