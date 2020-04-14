@@ -89,20 +89,20 @@ if(!empty($info))
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="userName">NIK / KTP<span class="text-danger">*</span></label>
-                            <input type="number" name="nik" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off" readonly
+                            <input type="number" name="nik" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off" readonly>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="userName">Nama Lengkap<span class="text-danger">*</span></label>
-                            <input type="text" name="nama_lengkap" parsley-trigger="change" required placeholder="Masukan nama lengkap" class="form-control" autocomplete="off">
+                            <input type="text" name="nama_lengkap" parsley-trigger="change" required placeholder="Masukan nama lengkap" class="form-control" autocomplete="off" readonly>
                         </div>
                     </div>
 
                     <div class="col-lg-3">
                         <div class="form-group">
                             <label for="userName">Jenis Kelamin<span class="text-danger">*</span></label>
-                            <select name="jenkel" class="form-control">
+                            <select name="jenkel" class="form-control" readonly>
                             <option value="">--Pilih--</option>
                             <option value="Laki-laki">Laki-laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -115,7 +115,7 @@ if(!empty($info))
                         <label>Tanggal Lahir</label>
                         <div>
                             <div class="input-group">
-                                <input name="ttl" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker-autoclose">
+                                <input name="ttl" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker-autoclose" readonly>
                                 <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
                             </div>
                         </div>
@@ -125,21 +125,21 @@ if(!empty($info))
                 <div class="col-lg-3">
                     <div class="form-group">
                         <label for="userName">Rt<span class="text-danger">*</span></label>
-                        <input type="number" name="rt" parsley-trigger="change" required placeholder="RT" class="form-control" autocomplete="off">
+                        <input type="number" name="rt" parsley-trigger="change" required placeholder="RT" class="form-control" autocomplete="off" readonly>
                     </div>
                 </div>
 
                     <div class="col-lg-3">
                         <div class="form-group">
                             <label for="userName">Rw<span class="text-danger">*</span></label>
-                            <input type="number" name="rw" parsley-trigger="change" required placeholder="RW" class="form-control" autocomplete="off">
+                            <input type="number" name="rw" parsley-trigger="change" required placeholder="RW" class="form-control" autocomplete="off" readonly>
                         </div>
                     </div>
 
                 <div class="col-lg-3">
                         <div class="form-group">
                             <label for="userName">Dusun<span class="text-danger">*</span></label>
-                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off">
+                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off" readonly>
                         </div>
                     </div>
 
