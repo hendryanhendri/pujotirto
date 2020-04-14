@@ -15,7 +15,7 @@ if(!empty($info))
     <div class="card-box card">
         <div class="m-b-20 table-responsive">
            <div class="bootstrap-filestyle input-group">
-            <span class="group-span-filestyle" tabindex="0" id="show_div_odp">
+            <span class="group-span-filestyle" tabindex="0" id="show_div_pdp">
                 <label for="filestyle-1" class="btn btn-default ">
                     <span class="icon-span-filestyle glyphicon glyphicon-plus">
                 </span> 
@@ -67,7 +67,7 @@ if(!empty($info))
     </div>
 </div>
 
-        <div class="col-lg-12">
+        <div class="col-lg-12 form_pdp">
             <div class="card-box card">
                 <div class="p-20 m-b-20">
                     <form action="<?php echo base_url(); ?>perantau/saveDataNonPerantau" class="form-validation" method="POST">

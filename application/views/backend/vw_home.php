@@ -263,6 +263,10 @@ $(document).ready(function(){
       $('#form_update_pdp').hide();
     });
 
+    $('#show_div_pdp').click(function() {
+      $('.form_pdp').toggle("slide");
+    });
+
 });
 </script>
 
