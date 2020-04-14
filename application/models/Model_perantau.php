@@ -64,6 +64,14 @@ class Model_perantau extends CI_Model {
         $this->db->from('vw_time_karantina');
         return $this->db->get();
     }
+
+    public function getDataPdp()
+    {
+      $this->db->select('*');
+      $this->db->where('status_', 'PDP');
+      $this->db->from('vw_time_karantina');
+      return $this->db->get();
+    }
     
 
 }

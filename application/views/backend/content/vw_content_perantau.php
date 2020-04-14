@@ -11,7 +11,7 @@ if(!empty($info))
 </br>
 
 <div class="row">
-    <div class="col-lg-12">
+<div class="col-lg-12">
     <div class="card-box card">
         <div class="m-b-20 table-responsive">
            <div class="bootstrap-filestyle input-group">

@@ -90,6 +90,7 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_non_perantau';
+        $result['getPDP']   = $this->dataModelPerantau->getDataPdp()->result();
         $this->load->view('backend/vw_home', $result);
     }
 
