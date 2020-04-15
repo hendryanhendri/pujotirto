@@ -67,7 +67,7 @@ if(!empty($info))
     </div>
 </div>
 
-        <div class="col-lg-12 form_pdp">
+        <div class="col-lg-12 form_pdp" style="display: none;">
             <div class="card-box card">
                 <div class="p-20 m-b-20">
                     <form action="<?php echo base_url(); ?>perantau/saveDataNonPerantau" class="form-validation" method="POST">

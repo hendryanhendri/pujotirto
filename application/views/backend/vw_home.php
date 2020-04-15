@@ -265,6 +265,7 @@ $(document).ready(function(){
 
     $('#show_div_pdp').click(function() {
       $('.form_pdp').toggle("slide");
+      $('.form_odp').hide();
     });
 
 });
