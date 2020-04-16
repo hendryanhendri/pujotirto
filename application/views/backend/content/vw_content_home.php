@@ -73,20 +73,6 @@
                         <!-- end row -->
 
     <div class="row">
-        <div class="col-lg-12">
-            <div class="card-box card">
-                <h4 class="m-t-0">Analisa Pemudik</h4>
-                <div class="text-center">
-                    <ul class="list-inline chart-detail-list">
-                        <li>
-                            <h5 class="font-normal"><i class="fa fa-circle m-r-10 text-primary"></i>Pemudik</h5>
-                        </li>
-                    </ul>
-                </div>
-                <div id="chart_pemudik_" style="height: 300px;"></div>
-            </div>
-        </div> 
-    </div>
 <div class="col-lg-6">
     <div class="card-box card">
         <div class="m-b-20 table-responsive">
@@ -116,7 +102,39 @@
         </div>
     </div>
 </div>
+        <!-- <div class="col-lg-6">
+            <div class="card-box card">
+                <h4 class="m-t-0">Total Revenue</h4>
+                <div class="text-center">
+                    <ul class="list-inline chart-detail-list">
+                        <li>
+                            <h5 class="font-normal"><i class="fa fa-circle m-r-10 text-primary"></i>Series A</h5>
+                        </li>
+                        <li>
+                            <h5 class="font-normal"><i class="fa fa-circle m-r-10 text-muted"></i>Series B</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div id="dashboard-bar-stacked" style="height: 300px;"></div>
+            </div>
+        </div> -->
 
+        <!-- <div class="col-lg-6">
+            <div class="card-box card">
+                <h4 class="m-t-0">Analisa Pemudik</h4>
+                <div class="text-center">
+                    <ul class="list-inline chart-detail-list">
+                        <li>
+                            <h5 class="font-normal"><i class="fa fa-circle m-r-10 text-primary"></i>Mobiles</h5>
+                        </li>
+                        <li>
+                            <h5 class="font-normal"><i class="fa fa-circle m-r-10 text-info"></i>Tablets</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div id="dashboard-line-chart" style="height: 300px;"></div>
+            </div>
+        </div>  -->
 
         <!-- end col -->
 
