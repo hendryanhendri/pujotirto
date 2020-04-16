@@ -27,6 +27,7 @@ class Home extends CI_Controller {
         $result['getPositif']   = $this->dataModelHome->getDataPositif()->result();
         $result['getMeninggal'] = $this->dataModelHome->getDataMeninggal()->result();
         $result['getSembuh']    = $this->dataModelHome->getDataSembuh()->result();
+        $result['getDataPemudik']   = $this->dataModelHome->getPemudik();
 
         
 

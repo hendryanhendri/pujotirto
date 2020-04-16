@@ -145,10 +145,27 @@
 		<script src="<?php echo  base_url(); ?>assets/plugins/raphael/raphael-min.js"></script>
 
         <!-- Dashboard init -->
-		<script src="<?php echo  base_url(); ?>assets/pages/jquery.dashboard.js"></script>
+		<!-- <script src="<?php echo  base_url(); ?>assets/pages/jquery.dashboard.js"></script> -->
 
         <!-- App Js -->
         <script src="<?php echo  base_url(); ?>assets/js/jquery.app.js"></script>
+
+<script>
+Morris.Area({
+  element: 'chart_pemudik',
+  data: [
+<?php foreach($getDataPemudik->result() as $row){?>
+
+    { y: '<?php echo $row->tanggal_pulang; ?>', a: <?php echo $row->total; ?>, },
+
+    <?php }?>
+  ],
+  xkey: 'y',
+  ykeys: ['a'],
+  labels: ['Pemudik']
+});
+
+</script>
 
     </body>
 </html>

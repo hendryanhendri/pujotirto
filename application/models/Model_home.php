@@ -29,6 +29,14 @@ class Model_home extends CI_Model {
         return $this->db->get('t_perantau');
     }
 
+    public function getPemudik()
+    {
+        $this->db->select(' count(*) as total, tanggal_pulang');
+        $this->db->from('vw_time_karantina');
+        $this->db->group_by('tanggal_pulang');
+        return $this->db->get();
+    }
+
     public function getDataPemudik()
     {
         $this->db->select('count(source_data) as total');
