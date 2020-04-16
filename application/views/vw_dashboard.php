@@ -82,6 +82,21 @@
                     <!-- End navigation menu  -->
                 </div>
             </div>
+
+            <ul class="nav navbar-nav navbar-right top-navbar-items-right pull-right">
+                <li class="top-menu-item-xs">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </li>
+            </ul>
+
         </div>
     </div> <!-- end container -->
 </div> <!-- end navbar -->

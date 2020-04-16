@@ -129,14 +129,7 @@
                     </a>
                     <!-- End mobile menu toggle-->
                 </li>
-                <li class="hidden-xs">
-                    <form role="search" class="navbar-left app-search pull-left">
-                            <input type="text" placeholder="Search..." class="form-control">
-                            <a href=""><i class="fa fa-search"></i></a>
-                    </form>
-                </li>
                 
-
                 <li class="dropdown top-menu-item-xs">
                     <a href="" class="dropdown-toggle menu-right-item profile" data-toggle="dropdown" aria-expanded="true"><img src="<?php echo base_url(); ?>gambar/user.png" alt="user-img" class="img-circle"> </a>
                     <ul class="dropdown-menu">
