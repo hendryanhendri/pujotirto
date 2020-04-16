@@ -12,6 +12,7 @@ class Dashboard extends CI_Controller {
 
     public function index()
     {
+        $result['content']    = 'front/content_dashboard';
         $this->load->library('user_agent');
         $value = array(
             'visit_date'    => date("Y-m-d H:i:s"),
