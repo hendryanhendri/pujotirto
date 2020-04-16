@@ -83,7 +83,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="chart_pemudik" style="height: 300px;"></div>
+                <div id="chart_pemudik_" style="height: 300px;"></div>
             </div>
         </div> 
     </div>

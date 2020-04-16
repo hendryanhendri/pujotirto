@@ -355,7 +355,7 @@ function MasukPdp(id){
 
 <script>
 Morris.Area({
-  element: 'chart_pemudik',
+  element: 'chart_pemudik_',
   data: [
 <?php foreach($getDataPemudik->result() as $row){?>
 
