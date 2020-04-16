@@ -60,7 +60,7 @@
                 { y: '2014', a: 75, b: 50 },
                 { y: '2015', a: 100, b: 70 }
             ];
-            this.createLineChart('dashboard-line-chart', $data, 'y', ['a', 'b'], ['Pemudik'], ['0.1'], ['#ffffff'], ['#999999'], ['#458bc4', '#23b195']);
+            this.createLineChart('dashboard-line-chart', $data, 'y', ['a', 'b'], ['Mobiles', 'Tablets'], ['0.1'], ['#ffffff'], ['#999999'], ['#458bc4', '#23b195']);
 
             //creating Stacked chart
             var $stckedData = [
