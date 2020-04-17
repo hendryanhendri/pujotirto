@@ -19,7 +19,7 @@
         <link href="<?php echo  base_url(); ?>assets/css/icons.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="<?php echo  base_url(); ?>assets/css/style.css" rel="stylesheet">
-        <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
 <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
