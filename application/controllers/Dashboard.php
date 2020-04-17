@@ -38,6 +38,8 @@ class Dashboard extends CI_Controller {
         $result['getMeninggal'] = $this->dataModelHome->getDataMeninggal()->result();
         $result['getSembuh']    = $this->dataModelHome->getDataSembuh()->result();
         $result['getDataPemudik']   = $this->dataModelHome->getPemudik();
+        $result['getDataKarantinaSelesai']  = $this->dataModelHome->getKarantinaSelesai()->result();
+        $result['getDataMasihKarantina']  = $this->dataModelHome->getKarantinaBelumSelesai()->result();
 
         $this->load->view('vw_dashboard', $result);
         

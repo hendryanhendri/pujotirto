@@ -36,6 +36,22 @@ class Model_home extends CI_Model {
         $this->db->group_by('tanggal_pulang');
         return $this->db->get();
     }
+    
+    public function getKarantinaSelesai()
+    {
+        $this->db->select('count(status_karantina) as total');
+        $this->db->where('status_karantina', 'KARANTINA SELESAI');
+        return $this->db->get('vw_time_karantina');
+
+    }
+
+    public function getKarantinaBelumSelesai()
+    {
+        $this->db->select('count(status_karantina) as total');
+        $this->db->where('status_karantina', 'ON KARANTINA');
+        return $this->db->get('vw_time_karantina');
+
+    }
 
     public function getDataPemudik()
     {

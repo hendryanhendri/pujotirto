@@ -69,6 +69,26 @@
                 </div>
                 <?php }?>
             </div>
+            <div class="col-sm-6">
+                <?php foreach($getDataKarantinaSelesai as $row){?>
+                <div class="card-box card">
+                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP <p> Selesai Karantina</p></center></h4><hr>
+                    <h2 class="m-b-20"><font color="#804d00"><center><?php echo $row->total; ?></font> <h5>Orang<h5></center></h2>
+                </div>
+                <?php }?>
+            </div>
+            <div class="col-sm-6">
+                <?php foreach($getDataMasihKarantina as $row){?>
+                <div class="card-box card">
+                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
+                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP <p> Masih Karantina</p></center></h4><hr>
+                    <h2 class="m-b-20"><font color="#804d00"><center><?php echo $row->total; ?></font> <h5>Orang<h5></center></h2>
+                </div>
+                <?php }?>
+            </div>
+
+            
         </div>
 
 

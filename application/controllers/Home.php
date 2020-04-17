@@ -20,16 +20,16 @@ class Home extends CI_Controller {
         // $characters = json_decode($data_url); // decode the JSON feed
     
         // $result['get_data_covid'] = $characters;
-        $result['dataRw']   = $this->dataModelHome->getDataPerRw()->result();
-        $result['getODP']       = $this->dataModelHome->getDataODP()->result();
-        $result['getPDP']       = $this->dataModelHome->getDataPDP()->result();
-        $result['getPemudik']   = $this->dataModelHome->getDataPemudik()->result();
-        $result['getPositif']   = $this->dataModelHome->getDataPositif()->result();
-        $result['getMeninggal'] = $this->dataModelHome->getDataMeninggal()->result();
-        $result['getSembuh']    = $this->dataModelHome->getDataSembuh()->result();
-        $result['getDataPemudik']   = $this->dataModelHome->getPemudik();
-
-        
+        $result['dataRw']                   = $this->dataModelHome->getDataPerRw()->result();
+        $result['getODP']                   = $this->dataModelHome->getDataODP()->result();
+        $result['getPDP']                   = $this->dataModelHome->getDataPDP()->result();
+        $result['getPemudik']               = $this->dataModelHome->getDataPemudik()->result();
+        $result['getPositif']               = $this->dataModelHome->getDataPositif()->result();
+        $result['getMeninggal']             = $this->dataModelHome->getDataMeninggal()->result();
+        $result['getSembuh']                = $this->dataModelHome->getDataSembuh()->result();
+        $result['getDataPemudik']           = $this->dataModelHome->getPemudik();
+        $result['getDataKarantinaSelesai']  = $this->dataModelHome->getKarantinaSelesai()->result();
+        $result['getDataMasihKarantina']  = $this->dataModelHome->getKarantinaBelumSelesai()->result();
 
         $this->load->view('backend/vw_home',$result);
     }
