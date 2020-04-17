@@ -69,7 +69,7 @@
                 </div>
                 <?php }?>
             </div>
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
                 <?php foreach($getDataKarantinaSelesai as $row){?>
                 <div class="card-box card">
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
@@ -87,7 +87,7 @@
                 </div>
                 <?php }?>
             </div>
-        </div>
+        </div> -->
                         <!-- end row -->
 
     <div class="row">
