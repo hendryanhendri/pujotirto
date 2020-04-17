@@ -75,7 +75,7 @@
                             <ul class="submenu">
                                 <li><a href="<?php echo base_url();?>info">Hubungi Kami</a></li>
                                 <li><a href="<?php echo base_url();?>info/info_kami">Tentang Kami</a></li>
-                                <li><a href="<?php echo base_url();?>info/saran_masukan">Saran/Masukan</a></li>
+                                <li><a href="<?php echo base_url();?>info/saran_masukan">Kritik/Saran</a></li>
                             </ul>
                         </li>
 
