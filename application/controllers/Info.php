@@ -28,9 +28,18 @@ class Info extends CI_Controller {
         
     }
 
-    public function info_kami()
+    public function info_kami($id='')
     {
         $data['content']    = 'front/content_tentang_kami';
+
+
+        $this->load->view('vw_dashboard', $data);
+
+    }
+
+    public function saran_masukan($id='')
+    {
+        $data['content']    = 'front/content_saran_masukan';
 
 
         $this->load->view('vw_dashboard', $data);
