@@ -72,6 +72,24 @@ class Model_perantau extends CI_Model {
       $this->db->from('vw_time_karantina');
       return $this->db->get();
     }
+
+    public function createAutoId(){
+      $this->db->select('RIGHT(t_perantau.nik,16) as kode', FALSE);
+      $this->db->order_by('nik', 'DESC');
+      $this->db->limit(1);
+      $query  = $this->db->get('t_perantau');
+      if($query->num_rows()<>0){
+        $data = $query->row();
+        $kode = intval($data->kode)+1;
+      }
+      else {
+        $kode = 16;
+      }
+      $kodemax  = str_pad($kode, 16, "0", STR_PAD_LEFT);
+      $kodejadi = $kodemax;
+      $kodejadi = $kodemax;
+      return $kodejadi;
+    }
     
 
 }

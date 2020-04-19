@@ -20,8 +20,9 @@ class Perantau extends CI_Controller {
     public function add_perantau($id='')
     {
         $this->Secure_access->getsecurity();
-        $result['content']  = 'backend/content/vw_content_perantau';
-        $result['getODP']   = $this->dataModelPerantau->getDataOdp()->result();
+        $result['content']      = 'backend/content/vw_content_perantau';
+        $result['getIdAuto']    = $this->dataModelPerantau->createAutoId();   
+        $result['getODP']       = $this->dataModelPerantau->getDataOdp()->result();
         $this->load->view('backend/vw_home', $result);
     }
 
@@ -29,8 +30,11 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
 
+
+
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
+            'no_ktp'            => $this->input->post('no_ktp'),
             'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
             'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
             'status_karantina'  => 'ON KARANTINA', 
@@ -39,6 +43,7 @@ class Perantau extends CI_Controller {
         
         $data_perantau   =array(
             'nik'               => $this->input->post('nik'),
+            'no_ktp'            => $this->input->post('no_ktp'),
             'nama_lengkap'      => $this->input->post('nama_lengkap'),
             'jenkel'            => $this->input->post('jenkel'),
             'rt'                => $this->input->post('rt'), 
@@ -100,6 +105,7 @@ class Perantau extends CI_Controller {
 
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
+            'no_ktp'                => $this->input->post('no_ktp'),
             'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
             'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
             'status_karantina'  => $this->input->post('status_karantina'), 
@@ -109,6 +115,7 @@ class Perantau extends CI_Controller {
         
         $data_perantau   =array(
             'nik'                   => $this->input->post('nik'),
+            'no_ktp'                => $this->input->post('no_ktp'),
             'nama_lengkap'          => $this->input->post('nama_lengkap'),
             'jenkel'                => $this->input->post('jenkel'),
             'rt'                    => $this->input->post('rt'), 
@@ -155,6 +162,7 @@ class Perantau extends CI_Controller {
 
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
+            'no_ktp'                => $this->input->post('no_ktp'),
             'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
             'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
             'status_karantina'  => $this->input->post('status_karantina'), 
@@ -164,6 +172,7 @@ class Perantau extends CI_Controller {
         
         $data_perantau   =array(
             'nik'                   => $this->input->post('nik'),
+            'no_ktp'                => $this->input->post('no_ktp'),
             'nama_lengkap'          => $this->input->post('nama_lengkap'),
             'jenkel'                => $this->input->post('jenkel'),
             'rt'                    => $this->input->post('rt'), 
@@ -215,6 +224,7 @@ class Perantau extends CI_Controller {
         $this->Secure_access->getsecurity();
         $data_tamu = array(
             'nik'               => $this->input->post('nik'),
+            'no_ktp'                => $this->input->post('no_ktp'),
             'nama_lengkap'      => $this->input->post('nama_lengkap'),
             'jenkel'            => $this->input->post('jenkel'),
             'nomor_hp_tamu'     => $this->input->post('nomor_hp_tamu'),

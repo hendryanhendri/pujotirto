@@ -326,6 +326,7 @@ function MasukPdp(id){
         success:function(data)
         {
             $('[name="nik"]').val(data.nik);
+            $('[name="no_ktp"]').val(data.no_ktp);
             $('[name="nama_lengkap"]').val(data.nama_lengkap);
             $('[name="jenkel"]').val(data.jenkel);
             $('[name="ttl"]').val(data.ttl);
