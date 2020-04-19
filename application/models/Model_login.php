@@ -22,6 +22,7 @@ class Model_login extends CI_Model {
                $_sess = array(
                    'username' => $value->username,
                    'fullname' => $value->fullname,
+                   'level' => $value->level,
                    'email'    => $value->email,
                    'phone'    => $value->phone,
                );

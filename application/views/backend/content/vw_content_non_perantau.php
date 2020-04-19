@@ -29,6 +29,7 @@ if(!empty($info))
             <table id="datatable-buttons" class="table table-striped table-bordered">
                 <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Nik/Ktp</th>
                     <th>Nama Lengkap</th>
                     <th>Jenis Kelamin</th>
@@ -49,6 +50,7 @@ if(!empty($info))
                         ?>
                 <tr>
                     <td><?php echo $row->nik; ?></td>
+                    <td><?php echo $row->no_ktp; ?></td>
                     <td><?php echo $row->nama_lengkap; ?></td>
                     <td><?php echo $row->jenkel; ?></td>
                     <td><?php echo $row->rt; ?></td>
@@ -75,8 +77,14 @@ if(!empty($info))
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
+                            <label for="userName">Id<span class="text-danger">*</span></label>
+                            <input type="number" name="nik" parsley-trigger="change" value="<?php echo $getIdAuto; ?>" required readonly class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
                             <label for="userName">NIK / KTP<span class="text-danger">*</span></label>
-                            <input type="number" name="nik" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
+                            <input type="number" name="no_ktp" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -126,7 +134,7 @@ if(!empty($info))
                 <div class="col-lg-3">
                         <div class="form-group">
                             <label for="userName">Dusun<span class="text-danger">*</span></label>
-                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off">
+                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off">
                         </div>
                     </div>
 

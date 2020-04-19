@@ -74,12 +74,181 @@ if(!empty($info))
 
                     <td><?php echo $row->kota_perantau; ?></td>
                     <td><button type="button" class="btn btn-sm btn-warning" onclick="MasukPdp('<?php echo $row->nik; ?>')">Masuk PDP</button>
-                    <!-- <button type="button" class="btn btn-sm btn-info" onclick="EditOdp('<?php echo $row->nik; ?>')">Edit</button>--></td> 
+                    <?php if($this->session->userdata('level') == 'Dewa'){?>
+                   <button type="button" class="btn btn-sm btn-info" onclick="EditOdp('<?php echo $row->nik; ?>')">Update Data</button>
+                   <?php }else{
+                   }?>
+                </td> 
                 </tr>
                 <?php }?>
                 </tbody>
             </table>
         </div>
+    </div>
+</div>
+
+<div class="col-lg-12" id="form_update_perantau" style="display: none;">
+        <div class="card-box card">
+                <div class="p-20 m-b-20">
+                    <form action="<?php echo base_url(); ?>perantau/UpdateDataPerantau" class="form-validation" method="POST">
+                        
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="userName">Id<span class="text-danger">*</span></label>
+                            <input type="number" name="nik" parsley-trigger="change" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off" readonly>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="userName">NIK / KTP<span class="text-danger">*</span></label>
+                            <input type="number" name="no_ktp" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="userName">Nama Lengkap<span class="text-danger">*</span></label>
+                            <input type="text" name="nama_lengkap" parsley-trigger="change" required placeholder="Masukan nama lengkap" class="form-control" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Jenis Kelamin<span class="text-danger">*</span></label>
+                            <select name="jenkel" class="form-control" >
+                            <option value="">--Pilih--</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <div>
+                            <div class="input-group">
+                                <input name="ttl" type="text" class="form-control" placeholder="bulan/tanggal/tahun" id="datepicker-autoclose" >
+                                <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="userName">Rt<span class="text-danger">*</span></label>
+                        <input type="number" name="rt" parsley-trigger="change" required placeholder="RT" class="form-control" autocomplete="off" >
+                    </div>
+                </div>
+
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Rw<span class="text-danger">*</span></label>
+                            <input type="number" name="rw" parsley-trigger="change" required placeholder="RW" class="form-control" autocomplete="off" >
+                        </div>
+                    </div>
+
+                <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Dusun<span class="text-danger">*</span></label>
+                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();">
+                        </div>
+                    </div>
+
+                <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Kelurahan<span class="text-danger">*</span></label>
+                            <input type="text" name="kelurahan" parsley-trigger="change" required value="Pujotirto" class="form-control" >
+                        </div>
+                    </div>
+            
+                <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Kecamatan<span class="text-danger">*</span></label>
+                            <input type="text" name="kecamatan" value="Karang Sambung" parsley-trigger="change" required  class="form-control" >
+                        </div>
+                </div>
+
+                <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="userName">Kabupaten<span class="text-danger">*</span></label>
+                            <input type="text" name="kabupaten" value="Kebumen" parsley-trigger="change" required class="form-control" >
+                        </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="userName">Nomor Telf<span class="text-danger">*</span></label>
+                        <input type="number" name="no_telf" parsley-trigger="change" required placeholder="Masukan 12 digit nomor telf" class="form-control" onKeyPress="if(this.value.length==12) return false;" min="0" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label>Tanggal Pulang</label>
+                        <div>
+                            <div class="input-group">
+                                <input name="tanggal_pulang" type="date" class="form-control" placeholder="bulan/tanggal/tahun">
+                                <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"  style="display: none;">
+                    <div class="form-group">
+                        <label>Start Karantina</label>
+                        <div>
+                            <div class="input-group">
+                            <input class="form-control" type="text" name="start_karantina"  value=" <?php
+                            echo date("d-M-Y");
+                            ?>" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"  style="display: none;">
+                    <div class="form-group">
+                        <label>Finish Karantina</label>
+                        <div>
+                            <div class="input-group">
+                            <input class="form-control" type="text" name="finish_karantina"  value="<?php
+                    $date = date_create();
+                            date_add($date, date_interval_create_from_date_string('14 days'));
+                            echo date_format($date, "d-M-Y");
+                            ?>"readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <label for="userName">Kota Perantau<span class="text-danger">*</span></label>
+                        <input type="text" name="kota_perantau" parsley-trigger="change" required placeholder="Kota perantau" class="form-control" autocomplete="off">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="userName">Alasan Pulang<span class="text-danger"></span></label>
+                        <textarea class="form-control" rows="5" name="keterangan" placeholder="Ketik alasannya disini.." autocomplete="off"></textarea>                    
+                    </div>
+                </div>
+
+    
+            </div>
+                        
+            <div class="form-group text-right m-b-0">
+                <button class="btn btn-primary waves-effect waves-light" type="submit">
+                    Update Data
+                </button>
+            </div>
+                </form>
+        </div> 
     </div>
 </div>
 
@@ -98,7 +267,7 @@ if(!empty($info))
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="userName">NIK / KTP<span class="text-danger">*</span></label>
-                            <input type="number" name="no_ktp" parsley-trigger="change" required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
+                            <input type="number" name="no_ktp" parsley-trigger="change" readonly required placeholder="Masukan 16 digit nomor ktp" class="form-control" onKeyPress="if(this.value.length==16) return false;" min="0" autocomplete="off">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -148,7 +317,7 @@ if(!empty($info))
                 <div class="col-lg-3">
                         <div class="form-group">
                             <label for="userName">Dusun<span class="text-danger">*</span></label>
-                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off" readonly>
+                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" readonly>
                         </div>
                     </div>
 
@@ -322,7 +491,7 @@ if(!empty($info))
                 <div class="col-lg-3">
                         <div class="form-group">
                             <label for="userName">Dusun<span class="text-danger">*</span></label>
-                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" autocomplete="off">
+                            <input type="text" name="dusun" parsley-trigger="change" required placeholder="Dusun" class="form-control" onkeyup="this.value = this.value.toUpperCase();" autocomplete="off">
                         </div>
                     </div>
 

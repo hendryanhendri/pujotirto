@@ -261,6 +261,7 @@ $(document).ready(function(){
       $('.form_odp').hide();
     });
 
+
 });
 </script>
 
@@ -318,6 +319,47 @@ function MasukPdp(id){
     save_method = 'update';
     $('#form_update_pdp').toggle("slide");
     $('.form_odp').hide();
+    $('#form_update_perantau').hide();
+
+    $.ajax({
+        url:"<?php echo site_url('perantau/ajax_edit'); ?>/"+ id,
+        type:"GET",
+        dataType: "JSON",
+        success:function(data)
+        {
+            $('[name="nik"]').val(data.nik);
+            $('[name="no_ktp"]').val(data.no_ktp);
+            $('[name="nama_lengkap"]').val(data.nama_lengkap);
+            $('[name="jenkel"]').val(data.jenkel);
+            $('[name="ttl"]').val(data.ttl);
+            $('[name="rt"]').val(data.rt);
+            $('[name="rw"]').val(data.rw);
+            $('[name="dusun"]').val(data.dusun);
+            $('[name="kelurahan"]').val(data.kelurahan);
+            $('[name="kecamatan"]').val(data.kecamatan);
+            $('[name="kabupaten"]').val(data.kabupaten);
+            $('[name="no_telf"]').val(data.no_telf);
+            $('[name="tanggal_pulang"]').val(data.tanggal_pulang);
+            $('[name="start_karantina"]').val(data.start_karantina);
+            $('[name="finish_karantina"]').val(data.finish_karantina);
+            $('[name="kota_perantau"]').val(data.kota_perantau);
+            $('[name="keterangan"]').val(data.keterangan);
+
+        },
+        error : function (jqXHR, textStatus, errorThrown)
+        {
+        alert('Error get data from ajax');
+      }
+
+    });
+
+}
+
+function EditOdp(id){
+    save_method = 'update';
+    $('#form_update_perantau').toggle("slide");
+    $('.form_odp').hide();
+    $('.form_update_pdp').hide();
 
     $.ajax({
         url:"<?php echo site_url('perantau/ajax_edit'); ?>/"+ id,

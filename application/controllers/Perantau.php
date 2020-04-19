@@ -30,8 +30,6 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
 
-
-
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
             'no_ktp'            => $this->input->post('no_ktp'),
@@ -95,6 +93,7 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_non_perantau';
+        $result['getIdAuto']    = $this->dataModelPerantau->createAutoId();  
         $result['getPDP']   = $this->dataModelPerantau->getDataPdp()->result();
         $this->load->view('backend/vw_home', $result);
     }
@@ -162,7 +161,7 @@ class Perantau extends CI_Controller {
 
         $data_karantina =array(
             'nik'               => $this->input->post('nik'),
-            'no_ktp'                => $this->input->post('no_ktp'),
+            'no_ktp'            => $this->input->post('no_ktp'),
             'start_karantina'   => date("Y-m-d", strtotime($this->input->post('start_karantina'))),
             'finish_karantina'  => date("Y-m-d", strtotime($this->input->post('finish_karantina'))),
             'status_karantina'  => $this->input->post('status_karantina'), 
@@ -210,6 +209,63 @@ class Perantau extends CI_Controller {
         redirect('perantau/add_perantau');
 
     }
+
+    public function UpdateDataPerantau($id='')
+    {
+        $this->Secure_access->getsecurity();
+
+        $data_karantina =array(
+            'nik'               => $this->input->post('nik'),
+            'no_ktp'            => $this->input->post('no_ktp'),
+        );
+        $this->dataModelPerantau->UpdateKarantina(array('nik' => $this->input->post('nik')), $data_karantina);
+        
+        $data_perantau   =array(
+            'no_ktp'            => $this->input->post('no_ktp'),
+            'nama_lengkap'      => $this->input->post('nama_lengkap'),
+            'jenkel'            => $this->input->post('jenkel'),
+            'rt'                => $this->input->post('rt'), 
+            'rw'                => $this->input->post('rw'),
+            'ttl'               => date("Y-m-d", strtotime($this->input->post('ttl'))), 
+            'dusun'             => $this->input->post('dusun'),
+            'kelurahan'         => $this->input->post('kelurahan'),
+            'kecamatan'         => $this->input->post('kecamatan'),
+            'kabupaten'         => $this->input->post('kabupaten'),
+            'no_telf'           => $this->input->post('no_telf'),
+            'status_'           => 'ODP',
+            'source_data'       => 'PERANTAU',
+            'kota_perantau'     => $this->input->post('kota_perantau'),
+            'keterangan'        => $this->input->post('keterangan'),
+            'tanggal_pulang'    => date("Y-m-d", strtotime($this->input->post('tanggal_pulang'))),
+            'updated_by'        => $this->session->userdata('fullname'),
+            'updated_date'      => date("Y-m-d H:i:s") 
+        );
+        $this->dataModelPerantau->UpdateDataPerantau(array('nik' => $this->input->post('nik')), $data_perantau);
+
+        $data_aktifitas =array(
+            'nik'           => $this->input->post('nik'),
+            'fullname'      => $this->session->userdata('fullname'),
+            'form_'         => 'FORM UPDATE DATA',
+            'action_'       => 'UPDATED',
+            'created_date'  => date("Y-m-d H:i:s"),
+        );
+        $insert_aktifitas = $this->dataModelPerantau->getInsertDataAktifitas($data_aktifitas);
+
+        echo json_encode(array("status" => TRUE));
+        $this->session->set_flashdata('info', '<center><div class="col-sm-12 m-t-20"><div class="alert alert-icon alert-info alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <i class="mdi mdi-check-all"></i>
+        <strong>Sukses!</strong> Yeay data berhasil diupdate !
+    </div></div><center>');
+
+        redirect('perantau/add_perantau');
+
+
+
+    }
+
+
 
     public function add_data_tamu($id='')
     {

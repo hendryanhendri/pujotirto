@@ -57,6 +57,13 @@ class Model_perantau extends CI_Model {
 
       }
 
+      public function UpdateDataPerantau($where, $data_perantau)
+      {
+        $this->db->update('t_perantau', $data_perantau, $where);
+        return $this->db->affected_rows();
+
+      }
+
     public function getDataOdp()
     {
         $this->db->select('*');
