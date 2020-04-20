@@ -73,9 +73,10 @@
                         <li class="has-submenu">
                             <a href="#"> <span><i class="mdi mdi-information "></i></span><span>Informasi</span> </a>
                             <ul class="submenu">
+                                <li><a href="<?php echo base_url();?>info/covid">Apa Sih Covid19.?</a></li>
+                                <li><a href="<?php echo base_url();?>info/saran_masukan">Kritik/Saran</a></li>
                                 <li><a href="<?php echo base_url();?>info">Hubungi Kami</a></li>
                                 <li><a href="<?php echo base_url();?>info/info_kami">Tentang Kami</a></li>
-                                <li><a href="<?php echo base_url();?>info/saran_masukan">Kritik/Saran</a></li>
                             </ul>
                         </li>
 

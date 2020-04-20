@@ -44,6 +44,7 @@ class Home extends CI_Controller {
 
     public function text_berjalan()
     {
+        $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_text_berjalan';
 
         $this->db->select('menu, icon');
@@ -58,6 +59,7 @@ class Home extends CI_Controller {
 
     public function histori_aktifitas()
     {
+        $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_histori';
         $result['getHistori']   = $this->dataModelHome->getDataHistori()->result();
 
@@ -74,6 +76,7 @@ class Home extends CI_Controller {
 
     public function master_data()
     {
+        $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_masterdata';
         $result['getMasterData'] = $this->dataModelHome->getDataMaster()->result();
 

@@ -13,8 +13,6 @@ class Berita extends CI_Controller {
     public function index()
     {
         $data['content']    = 'front/akan_datang';
-        
-
 
         $this->load->view('vw_dashboard', $data);
         

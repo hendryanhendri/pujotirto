@@ -49,7 +49,14 @@ class Info extends CI_Controller {
 
         $this->load->view('vw_dashboard', $data);
 
-    }
+	}
+	
+	public function covid()
+	{
+		$data['content']    = 'front/content_info_covid';
+
+		$this->load->view('vw_dashboard', $data);
+	}
 
     public function buat_captcha()
 	{
