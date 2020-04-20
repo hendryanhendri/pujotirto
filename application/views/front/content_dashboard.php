@@ -108,7 +108,7 @@
      <div class="row">
         <div class="col-lg-12">
             <div class="card-box card">
-                <h4 class="m-t-0">Analisa Pemudik</h4>
+                <h4 class="m-t-0">Grafik Pemantau Pemudik</h4>
                 <div class="text-center">
                     <ul class="list-inline chart-detail-list">
                         <li>
