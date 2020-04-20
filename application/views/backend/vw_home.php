@@ -10,10 +10,6 @@
 
 <link rel="shortcut icon" href="<?php echo base_url(); ?>gambar/covid.png">
 
-    <!-- Summernote css -->
-    <link href="<?php echo base_url(); ?>assets/plugins/summernote/summernote.css" rel="stylesheet" />
-
-
 <!-- Bootstrap core CSS -->
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
 <!-- Icons CSS -->
@@ -23,6 +19,10 @@
 
     <!--Morris Chart CSS -->
 <link rel="stylesheet" href="<?php echo  base_url(); ?>assets/plugins/morris/morris.css">
+
+<!-- Summernote css -->
+<link href="<?php echo base_url(); ?>assets/plugins/summernote/summernote.css" rel="stylesheet" />
+
 
 
     <!-- Plugins css-->
@@ -172,10 +172,6 @@
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.slimscroll.min.js"></script>
 
-    <!--Morris Chart-->
-<script src="<?php echo  base_url(); ?>assets/plugins/morris/morris.min.js"></script>
-<script src="<?php echo  base_url(); ?>assets/plugins/raphael/raphael-min.js"></script>
-
 <!-- Dashboard init -->
 <script src="<?php echo  base_url(); ?>assets/pages/jquery.dashboard.js"></script>
 <!-- App Js -->
@@ -214,6 +210,12 @@
 <script src="<?php echo base_url(); ?>assets/plugins/datatables/dataTables.scroller.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/datatables/dataTables.colVis.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/datatables/dataTables.fixedColumns.min.js"></script>
+
+
+    <!--Morris Chart-->
+<script src="<?php echo  base_url(); ?>assets/plugins/morris/morris.min.js"></script>
+<script src="<?php echo  base_url(); ?>assets/plugins/raphael/raphael-min.js"></script>
+
 
 <!-- init -->
 <script src="<?php echo base_url(); ?>assets/pages/jquery.datatables.init.js"></script>

@@ -12,83 +12,96 @@
         </div> <!-- end row --></br>
             
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <?php foreach($getPositif as $row3){?>
                 <div class="card-box card">
-                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
+                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Positif</center></h4><hr>
                     <h2 class="m-b-20"><font color="blue"><center><?php echo $row3->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
                 <?php }?>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-4">
             <?php foreach($getSembuh as $row4){?>
                 <div class="card-box card">
-                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
+                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Sembuh</center></h4><hr>
                     <h2 class="m-b-20"><font color="green"><center><?php echo $row4->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
             <?php }?>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <?php foreach($getMeninggal as $row5){?>
                 <div class="card-box card">
-                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
+                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total Meninggal</center></h4><hr>
                     <h2 class="m-b-20"><font color="red"><center><?php echo $row5->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
                 <?php }?>
             </div>
 
-            <div class="col-sm-3">
-                <?php foreach($getPemudik as $row2){?>
-                <div class="card-box card">
-                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
-                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total Pemudik</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#ffcc00"><center><?php echo $row2->total; ?></font> <h5>Orang<h5></center></h2>
-                </div>
-                <?php }?>
-            </div>
-            <div class="col-sm-6">
-                <?php foreach($getODP as $row){?>
-                <div class="card-box card">
-                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
-                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#804d00"><center><?php echo $row->total; ?></font> <h5>Orang<h5></center></h2>
-                </div>
-                <?php }?>
-            </div>
             <div class="col-sm-6">
                 <?php foreach($getPDP as $row1){?>
                 <div class="card-box card">
-                    <a href="#" class="btn btn-sm btn-default pull-right">View</a>
+                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
                     <h4 class="text-muted m-t-0 text-uppercase"><center>Total PDP</center></h4><hr>
                     <h2 class="m-b-20"><font color="#993300"><center><?php echo $row1->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
                 <?php }?>
             </div>
+
             <div class="col-sm-6">
-                <?php foreach($getDataKarantinaSelesai as $row){?>
+                <?php foreach($getPemudik as $row2){?>
                 <div class="card-box card">
                     <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
-                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP <p> Selesai Karantina</p></center></h4><hr>
-                    <h2 class="m-b-20"><font color="#804d00"><center><?php echo $row->total; ?></font> <h5>Orang<h5></center></h2>
+                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total Pemudik</center></h4><hr>
+                    <h2 class="m-b-20"><font color="#ffcc00"><center><?php echo $row2->total; ?></font> <h5>Orang<h5></center></h2>
                 </div>
                 <?php }?>
             </div>
-            <div class="col-sm-6">
-                <?php foreach($getDataMasihKarantina as $row){?>
-                <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
-                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total ODP <p> Masih Karantina</p></center></h4><hr>
-                    <h2 class="m-b-20"><font color="#804d00"><center><?php echo $row->total; ?></font> <h5>Orang<h5></center></h2>
+            
+        <div class="col-xs-12">
+            <div class="card-box card">
+                <div class="card-body">
+                <h4 class="card-title text-uppercase mb-0 text-center">Orang Dalam Pengawasan (ODP)</h4>
+                    <h2 class="h2 font-weight-bold mt-1 mb-0 text-center color-yellow">
+                    <?php foreach($getODP as $row){?>
+                    <font color="black"><?php echo $row->total; ?></font> </h2>
+                    <?php }?>
+                    <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
+                    </div>
+                    <p class="mt-3 mb-0 text-md text-center">
+                        <span class="text-nowrap">Total ODP</span>
+                    </p><hr>
+                    <center>
+                    <div class="row border-top">
+                    <?php foreach($getDataMasihKarantina as $row){?>
+                        <div class="col-xs-6">
+                            <h2 class="f-size-sm h2 font-weight-bold mt-1 mb-0 text-center color-yellow">
+                            <font color="red"><?php echo $row->total; ?></font> </h2></h2>
+                            <p class="mt-0 mb-1 text-md text-center">
+                                <span class="">Dalam Karantina</span>
+                            </p>
+                        </div>
+                    <?php }?>
+                    <?php foreach($getDataKarantinaSelesai as $row){?>
+                        <div class="col-xs-6">
+                            <h2 class="f-size-sm h2 font-weight-bold mt-1 mb-0 text-center color-yellow">
+                            <font color="green"><?php echo $row->total; ?></font> </h2></h2>
+                            <p class="mt-0 mb-1 text-md text-center">
+                                <span class="">Selesai Karantina</span>
+                            </p>
+                        </div>
+                        <?php }?>
+                    </div>
+                    </center>
                 </div>
-                <?php }?>
             </div>
-        </div>
-                        <!-- end row -->
+		</div>
+                    <!-- end row -->
 
     <div class="row">
 
