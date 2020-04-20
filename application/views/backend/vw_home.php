@@ -91,26 +91,23 @@
                             <a href="<?php echo base_url(); ?>home">
                                 <span><i class="ti-home"></i></span><span> Home </span> </a>
                         </li>
-
+                        <?php foreach($datamenu->result() as $row){?>
                         <li class="has-submenu">
-                            <a href="#"><span><i class="ti-cloud-up"></i></span><span> Penambahan Data</span> </a>
+                            <a href="#"><span><i class="<?php echo $row->icon; ?>"></i></span><span><?php echo $row->menu; ?></span> </a>
+                            
                             <ul class="submenu">
-                                <li><a href="<?php echo base_url();?>perantau/add_perantau">Data ODP</a></li>
-                                <li><a href="<?php echo base_url();?>perantau/add_non_perantau">Data PDP</a></li>
-                                <li><a href="<?php echo base_url();?>perantau/add_data_tamu">Data Tamu</a></li>
-                                <li><a href="<?php echo base_url();?>home/master_data">Master Data</a></li>
+                            <?php
+                            $this->db->select('submenu, menu, level, path');
+                            $this->db->where('menu', $row->menu);
+                            $this->db->where('level', $this->session->userdata('level'));
+                            $this->db->from('t_submenu');
+                            $query = $this->db->get();
+                            foreach($query->result() as $value){?>
+                                <li><a href="<?php echo base_url();?><?php echo $value->path; ?>"><?php echo $value->submenu; ?></a></li>
+                                <?php }?>
                             </ul>
                         </li>
-
-                        <li class="has-submenu">
-                            <a href="#"> <span><i class="ti-settings"></i></span><span>Pengaturan</span> </a>
-                            <ul class="submenu">
-                                <li><a href="<?php echo base_url();?>add_users">Tambah Pengguna</a></li>
-                                <li><a href="<?php echo base_url();?>home/histori_aktifitas">Histori Aktifitas</a></li>
-                                <li><a href="<?php echo base_url();?>home/text_berjalan">Ubah Text Berjalan</a></li>
-                            </ul>
-                        </li>
-
+                        <?php }?>
                     </ul>
                     <!-- End navigation menu  -->
                 </div>

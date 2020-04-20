@@ -14,6 +14,12 @@ class Add_users extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_users';
+        
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
 
         $result['getUsers'] = $this->getModelUsers->getDataUsers()->result();
 

@@ -18,7 +18,7 @@ class Home extends CI_Controller {
         // $url        = 'https://api.kawalcorona.com/indonesia'; // path to your JSON file
         // $data_url   = file_get_contents($url); // put the contents of the file into a variable
         // $characters = json_decode($data_url); // decode the JSON feed
-    
+
         // $result['get_data_covid'] = $characters;
         $result['dataRw']                   = $this->dataModelHome->getDataPerRw()->result();
         $result['getODP']                   = $this->dataModelHome->getDataODP()->result();
@@ -31,12 +31,26 @@ class Home extends CI_Controller {
         $result['getDataKarantinaSelesai']  = $this->dataModelHome->getKarantinaSelesai()->result();
         $result['getDataMasihKarantina']  = $this->dataModelHome->getKarantinaBelumSelesai()->result();
 
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+    
+
         $this->load->view('backend/vw_home',$result);
     }
 
     public function text_berjalan()
     {
         $result['content']  = 'backend/content/vw_content_text_berjalan';
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
 
         $this->load->view('backend/vw_home',$result);
 
@@ -45,8 +59,14 @@ class Home extends CI_Controller {
     public function histori_aktifitas()
     {
         $result['content']  = 'backend/content/vw_content_histori';
-        
         $result['getHistori']   = $this->dataModelHome->getDataHistori()->result();
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+        
 
         $this->load->view('backend/vw_home',$result);
 
@@ -56,6 +76,13 @@ class Home extends CI_Controller {
     {
         $result['content']  = 'backend/content/vw_content_masterdata';
         $result['getMasterData'] = $this->dataModelHome->getDataMaster()->result();
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+        
 
         $this->load->view('backend/vw_home', $result);
     }

@@ -20,11 +20,11 @@ class Model_login extends CI_Model {
         {
             foreach ($query->result() as $value) {
                $_sess = array(
-                   'username' => $value->username,
-                   'fullname' => $value->fullname,
-                   'level' => $value->level,
-                   'email'    => $value->email,
-                   'phone'    => $value->phone,
+                   'username'   => $value->username,
+                   'fullname'   => $value->fullname,
+                   'level'      => $value->level,
+                   'email'      => $value->email,
+                   'phone'      => $value->phone,
                );
                $this->session->set_userdata($_sess);
                redirect('home');

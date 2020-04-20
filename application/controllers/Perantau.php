@@ -13,6 +13,12 @@ class Perantau extends CI_Controller {
     public function index($id='')
     {
         $this->Secure_access->getsecurity();
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
         
         $this->load->view('backend/vw_home');
     }
@@ -21,6 +27,13 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
         $result['content']      = 'backend/content/vw_content_perantau';
+        
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+
         $result['getIdAuto']    = $this->dataModelPerantau->createAutoId();   
         $result['getODP']       = $this->dataModelPerantau->getDataOdp()->result();
         $this->load->view('backend/vw_home', $result);
@@ -93,6 +106,13 @@ class Perantau extends CI_Controller {
     {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_non_perantau';
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+
         $result['getIdAuto']    = $this->dataModelPerantau->createAutoId();  
         $result['getPDP']   = $this->dataModelPerantau->getDataPdp()->result();
         $this->load->view('backend/vw_home', $result);
@@ -265,13 +285,18 @@ class Perantau extends CI_Controller {
 
     }
 
-
-
     public function add_data_tamu($id='')
     {
         $this->Secure_access->getsecurity();
         $result['content']  = 'backend/content/vw_content_tamu';
         $result['dataTamu'] = $this->dataModelPerantau->getDataTamu()->result();
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+
         $this->load->view('backend/vw_home', $result);
     }
 
@@ -316,6 +341,51 @@ class Perantau extends CI_Controller {
     </div></div><center>');
 
         redirect('perantau/add_data_tamu');
+    }
+
+    public function add_data_positif()
+    {
+        $this->Secure_access->getsecurity();
+        $result['content']  = 'backend/content/vw_content_data_positif';
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+
+        $this->load->view('backend/vw_home', $result);
+
+    }
+
+    public function add_data_meninggal()
+    {
+        $this->Secure_access->getsecurity();
+        $result['content']  = 'backend/content/vw_content_data_meninggal';
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+
+        $this->load->view('backend/vw_home', $result);
+
+    }
+
+    public function add_data_sembuh()
+    {
+        $this->Secure_access->getsecurity();
+        $result['content']  = 'backend/content/vw_content_data_sembuh';
+
+        $this->db->select('menu, icon');
+        $this->db->from('t_menu');
+        $this->db->where('level', $this->session->userdata('level'));
+        $this->db->order_by('id_menu', 'asc');
+        $result['datamenu']		= $this->db->get();
+
+        $this->load->view('backend/vw_home', $result);
+
     }
 
 }
