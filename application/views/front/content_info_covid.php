@@ -16,12 +16,12 @@
 							<div class="lgx-heading">
 								<h2 class="heading">Tentang COVID-19</h2>
 								<h3 class="subheading">Apa itu COVID-19?</h3>
-							</div>
-							<div class="lgx-about-content">
+							</div>               
+                           <div class="lgx-about-content">
 								<p class="text text-justify">
 									Pneumonia Coronavirus Disease 2019 atau COVID-19 adalah penyakit peradangan paru yang disebabkan oleh Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2). Gejala klinis yang muncul beragam, mulai dari seperti gejala flu biasa (batuk, pilek, nyeri tenggorok, nyeri otot, nyeri kepala) sampai yang berkomplikasi berat (pneumonia atau sepsis).
 								</p>
-							</div>
+                            </div>
 							<div class="lgx-heading" style="margin-top: 2rem">
 								<h3 class="subheading">Bagaimana COVID-19 Menular?</h3>
 							</div>
@@ -42,7 +42,10 @@
 					</div>
 				</div>
 			</div>
-        </div><hr>
+        </div>
+        <hr>
         <p>Informasi gambar dan konten dalam halaman ini diambil dari website resmi</p> <a  target="_blank"  href="https://corona.kebumenkab.go.id">Corona Kebumen</a></p>
     </div>
+
+    
     

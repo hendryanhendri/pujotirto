@@ -30,6 +30,8 @@ class Home extends CI_Controller {
         $result['getDataPemudik']           = $this->dataModelHome->getPemudik();
         $result['getDataKarantinaSelesai']  = $this->dataModelHome->getKarantinaSelesai()->result();
         $result['getDataMasihKarantina']  = $this->dataModelHome->getKarantinaBelumSelesai()->result();
+        $result['getTotalPerRw']            = $this->dataModelHome->getDataPerRw()->result();
+        $result['getTotalPerRwPdp']            = $this->dataModelHome->getDataPerRwPdp()->result();
 
 
         $this->db->select('menu, icon');

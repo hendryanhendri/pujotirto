@@ -41,27 +41,42 @@
                 </div>
                 <?php }?>
             </div>
+        
+        <div class="col-xs-12">
+            <div class="card-box card">
+                <div class="card-body">
+                <h4 class="card-title text-uppercase mb-0 text-center">Total Pemudik</h4>
+                    <h2 class="h2 font-weight-bold mt-1 mb-20 text-center color-yellow">
 
-            <div class="col-sm-6">
-                <?php foreach($getPDP as $row1){?>
-                <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
-                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total PDP</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#993300"><center><?php echo $row1->total; ?></font> <h5>Orang<h5></center></h2>
+                    <?php foreach($getPemudik as $row2){?>
+                       <font color="#ffcc00"><?php echo $row2->total; ?></font> </h2>
+                    <?php }?>
+                    <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
+                    </div>
+                    <p class="mt-3 mb-0 text-md text-center">
+                        <span class="text-nowrap">Orang</span>
+                    </p><hr>
+                    <center>
+                    <div class="row border-top">
+                    
+
+                <?php foreach($getTotalPerRw as $row){?>
+                <div class="col-xs-2">
+                    <h4 class="f-size-sm h4 font-weight-bold mt-1 mb-0 text-center color-black">
+                        <span class="">RW <?php echo $row->rw; ?></span></h4>
+                    <h4 class="mt-0 mb-1 text-md text-center">
+                    <font color="black"><?php echo $row->total; ?></font> <hr>
+                    </h4>
                 </div>
                 <?php }?>
-            </div>
 
-            <div class="col-sm-6">
-                <?php foreach($getPemudik as $row2){?>
-                <div class="card-box card">
-                    <!-- <a href="#" class="btn btn-sm btn-default pull-right">View</a> -->
-                    <h4 class="text-muted m-t-0 text-uppercase"><center>Total Pemudik</center></h4><hr>
-                    <h2 class="m-b-20"><font color="#ffcc00"><center><?php echo $row2->total; ?></font> <h5>Orang<h5></center></h2>
+
+                    </div>
                 </div>
-                <?php }?>
             </div>
-            
+        </div>
+
         <div class="col-xs-12">
             <div class="card-box card">
                 <div class="card-body">
@@ -87,6 +102,7 @@
                             </p>
                         </div>
                     <?php }?>
+
                     <?php foreach($getDataKarantinaSelesai as $row){?>
                         <div class="col-xs-6">
                             <h2 class="f-size-sm h2 font-weight-bold mt-1 mb-0 text-center color-yellow">
@@ -96,8 +112,42 @@
                             </p>
                         </div>
                         <?php }?>
+
                     </div>
-                    </center>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12">
+            <div class="card-box card">
+                <div class="card-body">
+                <h4 class="card-title text-uppercase mb-0 text-center">Pasien Dalam Pantauan (PDP)</h4>
+                    <h2 class="h2 font-weight-bold mt-1 mb-20 text-center color-yellow">
+
+                    <?php foreach($getPDP as $row1){?>
+                       <font color="red"><?php echo $row1->total; ?></font> </h2>
+                    <?php }?>
+                    <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
+                    </div>
+                    <p class="mt-3 mb-0 text-md text-center">
+                        <span class="text-nowrap">Orang</span>
+                    </p><hr>
+                    <center>
+                    <div class="row border-top">
+
+
+                <?php foreach($getTotalPerRwPdp as $row){?>
+                <div class="col-xs-2">
+                    <h4 class="f-size-sm h4 font-weight-bold mt-1 mb-0 text-center color-black">
+                        <span class="">RW <?php echo $row->rw; ?></span></h4>
+                    <h4 class="mt-0 mb-1 text-md text-center">
+                    <font color="black"><?php echo $row->total; ?></font> <hr>
+                    </h4>
+                </div>
+                <?php }?>
+
+                    </div>
                 </div>
             </div>
 		</div>

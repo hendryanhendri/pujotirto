@@ -36,7 +36,7 @@ class Model_home extends CI_Model {
         $this->db->group_by('tanggal_pulang');
         return $this->db->get();
     }
-    
+
     public function getKarantinaSelesai()
     {
         $this->db->select('count(karantina_status) as total');
@@ -93,6 +93,16 @@ class Model_home extends CI_Model {
         $this->db->from('t_perantau');
         $this->db->group_by('rw');
         return $this->db->get();
+    }
+
+    public function getDataPerRwPdp()
+    {
+        $this->db->select('count(*) as total, rw');
+        $this->db->where('status_','PDP');
+        $this->db->from('t_perantau');
+        $this->db->group_by('rw');
+        return $this->db->get();
+
     }
 
     public function getDataMaster()
