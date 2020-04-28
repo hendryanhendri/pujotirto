@@ -134,6 +134,7 @@
 </div>
             <!-- end .page-contentbar -->
         </div>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
         <!-- End #page-wrapper -->
         <script type="text/javascript" src="https://app.diagrams.net/js/viewer.min.js"></script>
 
