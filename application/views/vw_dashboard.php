@@ -173,11 +173,17 @@ i.fa.fa-twitter:hover {
 </div> <!-- end navbar -->
     </div>
     <!-- Top Bar End -->
+    <?php 
+    $this->load->helper('url');
+    $currentURL = current_url();
+    $params   = $_SERVER['QUERY_STRING'];
+    $fullURL = $currentURL . '?' . $params;
+    ?>
 
 <!-- Page content start -->
 <?php $this->load->view($content); ?>
 <p>
-<a href="<?php echo base_url(); ?>dashboard" 
+<a href="<?php print_r($fullURL); ?>" 
   onclick="
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
@@ -186,13 +192,13 @@ i.fa.fa-twitter:hover {
     return false;" title="Bagikan Facebook">
   <i class="fa fa-facebook"></i> 
 </a>&nbsp;
-<a href="whatsapp://send?text=<?php echo base_url(); ?>dashboard" 
+<a href="whatsapp://send?text=<?php print_r($fullURL); ?>" 
     data-action="share/whatsapp/share" 
     onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
     target="_blank" title="Bagikan Whatsapp">
     <i class="fa fa-whatsapp"></i>
 </a>&nbsp;
-<a href="https://twitter.com/share?url=<?php echo base_url(); ?>dashboard&text=<Covid19 Pujotirto>"
+<a href="https://twitter.com/share?url=<?php print_r($fullURL); ?>&text=<Covid19 Pujotirto>"
      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
      target="_blank" title="Bagikan Twitter">
      <i class="fa fa-twitter"></i>
