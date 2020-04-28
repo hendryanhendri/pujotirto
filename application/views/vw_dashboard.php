@@ -34,6 +34,75 @@
 .container {
   padding: 2px 16px;
 } 
+
+i.fa.fa-facebook{
+	color:#fff;
+	background-color:#323331;
+	width:30px;
+	height:30px;
+	line-height:30px;
+        font-size: 16px;
+	border-radius:50%;
+	text-align:center;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+        -webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	-ms-border-radius:50%;
+	-ms-transition:0.5s all;
+}
+i.fa.fa-facebook:hover {
+	background-color:#1755E3;
+}
+
+i.fa.fa-whatsapp{
+	color:#fff;
+	background-color:#323331;
+	width:30px;
+	height:30px;
+	line-height:30px;
+        font-size: 16px;
+	border-radius:50%;
+	text-align:center;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+        -webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	-ms-border-radius:50%;
+	-ms-transition:0.5s all;
+}
+i.fa.fa-whatsapp:hover {
+	background-color:#18B948;
+}
+
+i.fa.fa-twitter{
+	color:#fff;
+	background-color:#323331;
+	width:30px;
+	height:30px;
+	line-height:30px;
+        font-size: 16px;
+	border-radius:50%;
+	text-align:center;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+        -webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	-ms-border-radius:50%;
+	-ms-transition:0.5s all;
+}
+i.fa.fa-twitter:hover {
+	background-color:#1BBBEC;
+}
 </style>
 </head>
 
@@ -107,16 +176,29 @@
 
 <!-- Page content start -->
 <?php $this->load->view($content); ?>
-
+<p>
 <a href="<?php echo base_url(); ?>dashboard" 
   onclick="
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
       'facebook-share-dialog', 
       'width=626,height=436'); 
-    return false;">
-  <i class="fa fa-facebook"></i> Share on Facebook
-</a> <hr>
+    return false;" title="Bagikan Facebook">
+  <i class="fa fa-facebook"></i> 
+</a>&nbsp;
+<a href="whatsapp://send?text=<<?php echo base_url(); ?>dashboard>" 
+    data-action="share/whatsapp/share" 
+    onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
+    target="_blank" title="Bagikan Whatsapp">
+    <i class="fa fa-whatsapp"></i>
+</a>&nbsp;
+<a href="https://twitter.com/share?url=<URL>&text=<TITLE>"
+     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
+     target="_blank" title="Bagikan Twitter">
+     <i class="fa fa-twitter"></i>
+    </a>
+</p>
+<hr>
 
 </div>
 <!-- end container -->
