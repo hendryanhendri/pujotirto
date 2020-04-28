@@ -186,13 +186,13 @@ i.fa.fa-twitter:hover {
     return false;" title="Bagikan Facebook">
   <i class="fa fa-facebook"></i> 
 </a>&nbsp;
-<a href="whatsapp://send?text=<<?php echo base_url(); ?>dashboard>" 
+<a href="whatsapp://send?text=<?php echo base_url(); ?>dashboard" 
     data-action="share/whatsapp/share" 
     onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
     target="_blank" title="Bagikan Whatsapp">
     <i class="fa fa-whatsapp"></i>
 </a>&nbsp;
-<a href="https://twitter.com/share?url=<URL>&text=<TITLE>"
+<a href="https://twitter.com/share?url=<?php echo base_url(); ?>dashboard&text=<Covid19 Pujotirto>"
      onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
      target="_blank" title="Bagikan Twitter">
      <i class="fa fa-twitter"></i>
