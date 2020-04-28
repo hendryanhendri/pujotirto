@@ -19,9 +19,8 @@
         <link href="<?php echo  base_url(); ?>assets/css/icons.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="<?php echo  base_url(); ?>assets/css/style.css" rel="stylesheet">
-        <link href="<?php echo  base_url(); ?>assets/random.css" rel="stylesheet">
-
-        <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>     
+        <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>   
+        <link href="<?php echo  base_url(); ?>assets/random.css" rel="stylesheet">  
 
 </head>
 
