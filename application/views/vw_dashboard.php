@@ -20,7 +20,94 @@
         <!-- Custom styles for this template -->
         <link href="<?php echo  base_url(); ?>assets/css/style.css" rel="stylesheet">
         <script data-ad-client="ca-pub-8270655312968483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>   
-        <link href="<?php echo  base_url(); ?>assets/random.css" rel="stylesheet">  
+       
+<style>
+            .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-color: #089ce4;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+i.fa.fa-facebook {
+    color: #fff;
+    background-color: #323331;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -ms-transition: 0.5s all;
+}
+
+i.fa.fa-facebook:hover {
+    background-color: #1755E3;
+}
+
+i.fa.fa-whatsapp {
+    color: #fff;
+    background-color: #323331;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -ms-transition: 0.5s all;
+}
+
+i.fa.fa-whatsapp:hover {
+    background-color: #18B948;
+}
+
+i.fa.fa-twitter {
+    color: #fff;
+    background-color: #323331;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -ms-transition: 0.5s all;
+}
+
+i.fa.fa-twitter:hover {
+    background-color: #1BBBEC;
+}
+</style>
 
 </head>
 
