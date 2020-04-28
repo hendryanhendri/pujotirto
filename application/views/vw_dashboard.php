@@ -177,7 +177,7 @@ i.fa.fa-twitter:hover {
     $this->load->helper('url');
     $currentURL = current_url();
     $params   = $_SERVER['QUERY_STRING'];
-    $fullURL = $currentURL . '?' . $params;
+    $fullURL = $currentURL . $params;
     ?>
 
 <!-- Page content start -->
