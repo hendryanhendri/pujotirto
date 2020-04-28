@@ -115,7 +115,7 @@
       'facebook-share-dialog', 
       'width=626,height=436'); 
     return false;">
-  Share on Facebook
+  <i class="fa fa-facebook"></i> Share on Facebook
 </a> <hr>
 
 </div>
