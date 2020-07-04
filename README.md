@@ -32,6 +32,14 @@ Adapun informasi yang diberikan dari system ini sebagai berikut :
 PHP > 5.6 
 Mysql Database
 
+<!-- PENTING JANGAN SAMPAI LUPA--->
+Buatlah sebuah user di table user dan table level untuk hak akses
+ - level Dewa
+ - level User
+Akses web dengan path http://localhost/directoryfilenya untuk yang tampilan umum
+Akses web dengan path http://localhost/directoryfilenya/routefilenya untuk yang masuk kedalam administratornya.
+ <!--  Selesai-->
+
 Note :
 Silahkan jika ingin dikembangkan, database saya ikutkan didalam aplikasi ini tinggal di exstak saja ya teman-teman, bebas kalian mao diapain tujuan saya hanya share code saja dan jika kalian mao chat chit chet langsung mention aja di halaman facebook saya.
 atau kalo kalian butuh system apa saja yang berkaitan dengan web developer insyallah saya siap hehe.
