@@ -33,7 +33,7 @@ PHP > 5.6 .
 Mysql Database.
 <!-- PENTING JANGAN SAMPAI LUPA--->
 - Download File ini lalu exstrak.
-- Buat database (bebas nama db nya apa aja).
+- Buat database (db_pujotirto).
 - Check File DB nya yang sudah saya buat di folder database.
 - Buat File Config.php
 - Buat File Database.php
