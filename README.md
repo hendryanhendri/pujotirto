@@ -29,15 +29,22 @@ Adapun informasi yang diberikan dari system ini sebagai berikut :
 ===========================================================================
 
 #Dependency :
-PHP > 5.6 
-Mysql Database
-
+PHP > 5.6 .
+Mysql Database.
 <!-- PENTING JANGAN SAMPAI LUPA--->
-Buatlah sebuah user di table user dan table level untuk hak akses
+- Download File ini lalu exstrak.
+- Buat database (bebas nama db nya apa aja).
+- Check File DB nya yang sudah saya buat di folder database.
+- Buat File Config.php
+- Buat File Database.php
+- Buatlah sebuah user di table user dan table level untuk hak akses untuk login di bagian administrator.
  - level Dewa
  - level User
-Akses web dengan path http://localhost/directoryfilenya untuk yang tampilan umum
-Akses web dengan path http://localhost/directoryfilenya/routefilenya untuk yang masuk kedalam administratornya.
+- Buatlah password manual md5.
+- Akses web dengan path http://localhost/directoryfilenya untuk yang tampilan umum
+- Akses web dengan path http://localhost/directoryfilenya/routefilenya untuk yang masuk kedalam administratornya.
+
+Setelah udah semuanya kalian bisa langsung coba input data dan lihatlah hasilnya.
  <!--  Selesai-->
 
 Note :
