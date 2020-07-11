@@ -40,6 +40,8 @@ Mysql Database.
 - Buatlah sebuah user di table user dan table level untuk hak akses untuk login di bagian administrator.
  - level Dewa
  - level User
+- Import csv t_menu
+- Import csv t_submenu
 - Buatlah password manual md5.
 - Akses web dengan path http://localhost/directoryfilenya untuk yang tampilan umum
 - Akses web dengan path http://localhost/directoryfilenya/routefilenya untuk yang masuk kedalam administratornya.
